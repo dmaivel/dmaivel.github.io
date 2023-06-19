@@ -106,7 +106,7 @@ ptrace(PTRACE_CONT, process, NULL, NULL);
 
 ### Additional Instruction Support
 
-Typically, if you ever run the instruction `cpuid` in a virtual machine, it will spit out the hypervisor's vendor, rather than the host's vendor *(unless modified to not do that)*. In it's current state, our program, when executing this instruction, will spit out the host's result. Changing the result however is relatively simple within the userspace, using the syscall `arch_prctl`, introduced in Linux 4.12, supported on Ivy Bridge onwards, and 64-bit only[^3].
+Typically, if you ever run the instruction `cpuid` in a virtual machine, it will spit out the hypervisor's vendor, rather than the host's vendor *(unless modified to not do that)*. In it's current state, our program, when executing this instruction, will spit out the host's result. Changing the result however is relatively simple within the userspace, using the syscall `arch_prctl`, introduced in Linux 4.12 and supported on Ivy Bridge onwards[^3].
 
 ```java
 syscall(SYS_arch_prctl, ARCH_SET_CPUID, NULL);
@@ -141,7 +141,7 @@ Although there is a possible workaround involving rebuilding the kernel to enabl
 
 ### Additional Notes
 
-Another solution using *ptrace* is to single step through the executing programs. Although this will have a major performance impact when compared to simply executing all instructions and catching faults where we can, this solution may be more practical when it comes to executing just a few instructions while having complete control over syscalls, CPUID, and memory operaitons, easing the way for users to emulate other processor features, most notably virtual memory.
+Another solution using *ptrace* is to single step through the executing programs. Although this will have a major performance impact when compared to simply executing all instructions and catching faults where we can, this solution may be more practical when it comes to executing just a few instructions while having complete control over syscalls and memory operaitons, easing the way for users to emulate other processor features, most notably virtual memory.
 
 ### Demo
 
