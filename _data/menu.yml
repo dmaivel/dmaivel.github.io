@@ -5,6 +5,8 @@ entries:
   - title: info
     entries:
       - title: hs student
+      - title: portfolio
+        url: portfolio
       - title: github
         url: https://github.com/dmaivel
 
