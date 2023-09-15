@@ -3,6 +3,9 @@ layout: page
 title: Portfolio
 ---
 
+| <img src="https://avatars.githubusercontent.com/u/38770072?v=4" width="128" height="128" /> | **Email**: dvmaivel@gmail.com <br> **Github**: [github.com/dmaivel](https://github.com/dmaivel) <br> |
+
+
 ## Projects
 Here is a list of all of my *public* projects, a short description of each one, and any additional information I want the reader to know about them.
 
