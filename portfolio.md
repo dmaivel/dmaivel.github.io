@@ -5,6 +5,8 @@ title: Portfolio
 
 | <img src="https://avatars.githubusercontent.com/u/38770072?v=4" width="128" height="128" /> | **Email**: dvmaivel@gmail.com <br> **Github**: [github.com/dmaivel](https://github.com/dmaivel) <br> |
 
+## About me
+I am currently a high school student, aspiring to become a computer engineer. I am self-taught and primarily experienced in C, C++, and Assembly (x86/64). I am especially passionate about low level development, including processor design, virtualization, graphics programming, and cybersecurity.
 
 ## Projects
 Here is a list of all of my *public* projects, a short description of each one, and any additional information I want the reader to know about them.
