@@ -1,0 +1,47 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'dmaivel'
+theme = 'archie'
+copyright = "© dmaivel"
+favicon = true
+
+pygmentsstyle = "colorful"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[toggle]
+        icon = "moon"
+        name = "Switch to light mode"
+
+[params]
+	mode="light" # color-mode → light,dark or auto
+	featherIconsCDN=true
+
+# Social Tags
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/dmaivel"
+
+[[params.social]]
+name = "Reddit"
+icon = "user"
+url = "https://www.reddit.com/user/dmaivel"
+
+# Main menu Items
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
