@@ -35,4 +35,4 @@ A basic neural network implementation written in C. The motivation behind this p
 # ☁️ umvirt: usermode virtualization
 Proof of concept for "virtualization" within usermode on x86-64, allowing users to execute priveledged code outside of the kernel space. This project is fairly small as it serves to be an example for the information discussed in one of my blog posts.
  - [Source code](https://github.com/dmaivel/umvirt)
- - [Blog post](../posts/virt-in-user)
+ - [Blog post](../posts/virtualization-in-usermode)
