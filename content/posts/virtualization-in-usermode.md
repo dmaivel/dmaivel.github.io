@@ -37,6 +37,7 @@ This snippet (a simple while loop) will execute the same, regardless of whether 
 
 Now, consider this example:
 ```asm
+; return __readcr0()
 function:
   push rbp
   mov rbp, rsp
