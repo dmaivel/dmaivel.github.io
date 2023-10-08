@@ -1,4 +1,10 @@
 <header>
+	{{ $syntax_dark_css := resources.Get "syntax_dark.css" | minify }}
+	{{ $syntax_light_css := resources.Get "syntax_light.css" | minify }}
+  
+	<link rel="preload stylesheet" as="style" href="{{ $syntax_dark_css.Permalink }}" />
+	<link rel="preload stylesheet" as="style" href="{{ $syntax_light_css.Permalink }}" />
+	
 	<div class="main">
 		<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 	</div>
@@ -7,7 +13,7 @@
 		<a href="{{ .URL }}">{{ .Name }}</a>
 		{{ end }}
 		{{ if eq .Site.Params.mode "toggle" -}}
-        | <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+        | <a id="dark-mode-toggle" onclick="toggleTheme()" href=""></a>
 		<script src="{{ .Site.BaseURL }}js/themetoggle.js"></script>
 		{{ end }}
 	</nav>

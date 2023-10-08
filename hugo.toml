@@ -5,17 +5,17 @@ theme = 'archie'
 copyright = "© dmaivel"
 favicon = true
 
-pygmentsstyle = "colorful"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
+[markup.highlight]
+    noClasses          = false
 
-[toggle]
-        icon = "moon"
-        name = "Switch to light mode"
+#pygmentsstyle = "github-dark"
+#pygmentscodefences = true
+#pygmentscodefencesguesssyntax = true
 
 [params]
-	mode="light" # color-mode → light,dark or auto
+	mode="toggle" # color-mode → light,dark or auto
 	featherIconsCDN=true
+        mathjax = true
 
 # Social Tags
 

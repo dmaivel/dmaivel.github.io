@@ -15,6 +15,9 @@ Typically, a host will have a piece of software known as a hypervisor, which run
 
 Of the current issues present, code execution may be the easiest to address. Most instructions a binary will execute in its lifetime can already be executed without issue in userland. Consider the following example:
 ```asm
+; v0 = 0
+; while (v0 < 10)
+;    v0++
 function:
   push rbp
   mov rbp, rsp
