@@ -17,7 +17,7 @@ I am currently a high school student, aspiring to become a computer engineer. I 
 Here is a list of all of my *public* projects, a short description of each one, and any additional information I want the reader to know about them.
 
 # 🖥️ SharedGL: OpenGL for VMs
-An OpenGL implementation over shared memory enabling 3D acceleration in virtual machines. This project was created with the sole intention of achieving 3D acceleration inside of Windows guests running in QEMU, as previously there has been little to no support for graphics acceleration in these VMs, excluding full GPU passthrough. SharedGL offers an installable OpenGL client for both Linux and Windows, acting as the sole GPU driver. It should be noted this project is still in active development.
+An OpenGL implementation across networks and shared memory, enabling 3D acceleration in virtual machines and across devices on LAN. This project was created with the sole intention of achieving 3D acceleration inside of Windows guests running in QEMU, as previously there has been little to no support for graphics acceleration in these VMs, excluding full GPU passthrough. However, with the addition of networking, this has expanded from virtual machines to machines across a network. SharedGL offers an installable OpenGL client for both Linux and Windows, acting as the sole GPU driver.
  - [Source code](https://github.com/dmaivel/sharedgl)
 
 # 🚀 vscc: x86 compiler backend
