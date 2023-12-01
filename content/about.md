@@ -11,10 +11,10 @@ layout: "about"
 {{< /rawhtml >}}
 
 # About me
-I am currently a high school student, aspiring to become a computer engineer. I am self-taught and primarily experienced in C, C++, and Assembly (x86/64). I am especially passionate about low level development, including processor design, virtualization, graphics programming, and cybersecurity.
+I am currently a high school student, aspiring to become a computer engineer. I am self-taught and primarily experienced in C, C++, and Assembly (x86/64). I am passionate for low level development and machine learning.
 
 # Projects
-Here is a list of all of my *public* projects, a short description of each one, and any additional information I want the reader to know about them.
+Here is a list of all of my *public* projects, including a short description for each one.
 
 # 🖥️ SharedGL: OpenGL for VMs
 An OpenGL implementation across networks and shared memory, enabling 3D acceleration in virtual machines and across devices on LAN. This project was created with the sole intention of achieving 3D acceleration inside of Windows guests running in QEMU, as previously there has been little to no support for graphics acceleration in these VMs, excluding full GPU passthrough. However, with the addition of networking, this has expanded from virtual machines to machines across a network. SharedGL offers an installable OpenGL client for both Linux and Windows, acting as the sole GPU driver.
