@@ -11,7 +11,7 @@ layout: "about"
 {{< /rawhtml >}}
 
 # About me
-I am currently a high school student, aspiring to become a computer engineer. I am self-taught and primarily experienced in C, C++, and Assembly (x86/64). I am passionate for low level development, virtualization, processor design, cybersecurity, and machine learning.
+I am currently a high school student, aspiring to become a computer engineer. I am self-taught and primarily experienced in C, C++, and Assembly (x86/64). I am passionate for low level development, virtualization, processor architectures, cybersecurity, and machine learning.
 
 # Projects
 Here is a list of all of my *public* projects, including a short description for each one.
