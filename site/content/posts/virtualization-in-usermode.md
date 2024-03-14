@@ -131,9 +131,7 @@ syscall(SYS_arch_prctl, ARCH_SET_CPUID, NULL);
 
 By calling the syscall using the given code, we can make our fork generate **SIGSEGV** upon invoking `cpuid`, giving us full control over its behavior.
 
-This syscall can also be used for getting/setting the FS/GS registers, however may result in undefined behavior as **ARCH_SET_GS** may be disabled in some kernels and **FS** already being in use by threading libraries.
-
-> ⚠️ Modification of segment registers may/will result in undefined behavior.
+This syscall can also be used for getting/setting the FS/GS registers{{< sidenote ind="" >}} Segment registers often contain critical process data, so modifying them will result in negative side effects. {{< /sidenote >}}, however may result in undefined behavior as **ARCH_SET_GS** may be disabled in some kernels and **FS** already being in use by threading libraries.
 
 # Syscall emulation
 
