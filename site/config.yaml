@@ -25,7 +25,7 @@ markup:
 
 params:
   # Subtitle of the website
-  subtitle: "my silly blog"
+  # subtitle: "my silly blog"
   favicon: "./favicon.ico"
   touchicon: "./touch-icon.png"
   # Dark code highlighting

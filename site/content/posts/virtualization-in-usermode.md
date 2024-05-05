@@ -14,7 +14,7 @@ However, with a few hacks and tricks, its becomes apparent that there is some po
 
 Typically, a host will have a piece of software known as a hypervisor, which runs in kernel mode (arguably a ring below) that allows for virtualization, creating executive environments seperate from your operating system, allowing the user to run other operating systems atop of their own. The question is, **can we emulate the behavior of a hypervisor in usermode?**
 
-# Code execution structure
+## Code execution structure
 
 Of the current issues present, code execution may be the easiest to address. Most instructions a binary will execute in its lifetime can already be executed without issue in userland. Consider the following example:
 ```asm
@@ -70,7 +70,7 @@ However, this single process architecture becomes limitting quickly. For one, co
 
 By utilizing *fork* and *ptrace*,{{< sidenote ind="" >}} Note that neither of these solutions will necessarily grant you the abilty to elegantly switch between 32-bit and 64-bit. Instead of modfying the segment registers, you could use `posix_spawn`, if needed. {{< /sidenote >}} we bring down the risk of corruption significantly as we are able to spawn a clone of our current process, effectively splitting into two. Our forks only task is to signal **PTRACE_TRACEME** and **SIGSTOP**, allowing the parent to attach to the child process and begin initialization.
 
-# Basic physical memory implementation
+## Basic physical memory implementation
 
 Now that we've defined the architecture for our usermode "hypervisor", we've ran into our next issue. How will we address memory? Luckily, we won't have to emulate most instructions that access memory with `mmap`.
 
@@ -99,11 +99,11 @@ vm.mmap_min_addr = 0
 
 Although we can change the limit of the minimum mappable address, the same cannot be said for the highest address we can map to. The total address space *mmap* can address is limitted from `0x000000000000` to `0x800000000000`, as the userspace can only see these addresses, with addresses above this range being reserved for the kernel. If one wishes to support addresses above this space, MMU emulation is required.
 
-# Initialization
+## Initialization
 
 Before splitting the process through forking, we must create a memory map before hand. Upon its creation, the process will fork itself into two. As stated before, the child's only task during initialization is to signal to parent that the process is ready and tracable. The task of the parent when attaching to the forked process and recieving **SIGSTOP** is to map any data/executables into memory and set the context accordingly.
 
-# Instruction emulation
+## Instruction emulation
 
 Once initialization is over, the parent process will have entered a loop where it will continously call `wait(...)` and handle each fault. Upon reaching a fault, the parent has to get the current state of the child by obtaining the current state of the registers:
 ```c
@@ -121,7 +121,7 @@ ptrace(PTRACE_SETREGSET, process, NT_PRSTATUS, &x86_io);
 ptrace(PTRACE_CONT, process, NULL, NULL);
 ```
 
-# Additional instruction support
+### Additional instruction support
 
 Typically, if you ever run the instruction `cpuid` in a virtual machine, it will spit out the hypervisor's vendor, rather than the host's vendor *(unless modified to not do that)*. In it's current state, our program, when executing this instruction, will spit out the host's result. Changing the result however is relatively simple within the userspace, using the syscall `arch_prctl`, introduced in Linux 4.12 and supported on Ivy Bridge onwards[^3].
 
@@ -133,7 +133,7 @@ By calling the syscall using the given code, we can make our fork generate **SIG
 
 This syscall can also be used for getting/setting the FS/GS registers{{< sidenote ind="" >}} Segment registers often contain critical process data, so modifying them will result in negative side effects. {{< /sidenote >}}, however may result in undefined behavior as **ARCH_SET_GS** may be disabled in some kernels and **FS** already being in use by threading libraries.
 
-# Syscall emulation
+### Syscall emulation
 
 As for supporting syscalls without hardcoding predefined ones (meaning the software implements its own syscalls), `rdmsr` and `wrmsr` emulation must be used as to support/track the following MSRs[^4]:
 
@@ -146,7 +146,7 @@ As for supporting syscalls without hardcoding predefined ones (meaning the softw
 
 Otherwise, the user may trap the syscall instruction and emulate the behavior using hardcoded syscalls.
 
-# 16-bit emulation
+## 16-bit emulation
 
 An interesting problem that arose when attempting to create a full-fledged virtual machine in usermode was the handling of the initial state of the CPU. All x86 CPUs boot into *real mode*, a legacy 16-bit mode from the 8086 days with limitted addressing capacity, no memory protection, and no virtual memory[^5]. It's from this state which processors will either switch to *protected mode* (32-bits) or *long mode* (64-bits). For a user who only wishes to execute priveledged code, like a kernel, they can completely ignore this mode. However, for those who wish to build a full fledged virtual machine, this step is crucial in early initialization.
 
@@ -154,11 +154,11 @@ Linux provides the function `vm86(...)`, a system call for a protected mode task
 
 Although there is a possible workaround involving rebuilding the kernel to enable it[^7], it would be more of a hassle than required to get the legacy system up and running. Completely emulating real mode before handing over control to the forked process, once a switch has been made, is a much more reliable solution and is relatively inexpensive in terms of performance.
 
-# Additional notes
+## Additional notes
 
 Another solution using *ptrace* is to single step through the executing programs. Although this will have a major performance impact when compared to simply executing all instructions and catching faults where we can, this solution may be more practical when it comes to executing just a few instructions while having complete control over syscalls and memory operaitons, easing the way for users to emulate other processor features, most notably virtual memory.
 
-# Demo
+## Demo
 
 [https://github.com/dmaivel/umvirt](https://github.com/dmaivel/umvirt)
 
