@@ -254,12 +254,16 @@ figure.fullwidth figcaption {
 /* Links: replicate underline that clears descenders */
 a:link,
 a:visited {
-    color: #6233b3 // inherit;
+    color: #5547c0 // inherit;
 }
 
 .menu ul li a {
     color: #111 !important;
 }
+
+// .content-title a {
+//     color: #111 !important;
+// }
 
 /* Sidenotes, margin notes, figures, captions */
 img {
@@ -281,11 +285,11 @@ img {
 }
 
 .marginnote strong {
-    color: #6233b3;
+    color: #5547c0;
 }
 
 .sidenote-number {
-    color: #6233b3;
+    color: #5547c0;
     font-weight: bold;
 }
 
