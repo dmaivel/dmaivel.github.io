@@ -20,11 +20,21 @@
   {{ end }}
   
   {{ if isset .Site.Params "linkedin" }}
-  <li><a href="https://linkedin.com/in/{{.Site.Params.linkedin}}">LinkedIn</a></li>
+  <!--<li><a href="https://linkedin.com/in/{{.Site.Params.linkedin}}">LinkedIn</a></li>-->
+  <a style="display: inline-block; position: relative; z-index: 1;" href="https://linkedin.com/in/{{.Site.Params.linkedin}}">
+    <span style="display: inline-block;">
+      <object style="position: relative; z-index: -1" id="svg1" data="linkedin.svg" type="image/svg+xml"></object>
+    </span>
+  </a>
   {{ end }}
 
   {{ if isset .Site.Params "github" }}
-  <li><a href="https://github.com/{{.Site.Params.github}}">GitHub</a></li>
+  <!--<li><a href="https://github.com/{{.Site.Params.github}}">GitHub</a></li>-->
+  <a style="display: inline-block; position: relative; z-index: 1;" href="https://github.com/{{.Site.Params.github}}">
+    <span style="display: inline-block;">
+      <object style="position: relative; z-index: -1" id="svg1" data="github.svg" type="image/svg+xml"></object>
+    </span>
+  </a>
   {{ end }}
 
   {{ if isset .Site.Params "gitlab" }}
