@@ -56,7 +56,7 @@ We will use `GL_RGBA32F`, as it allows for a vectorized representation of our da
 {{< figure
   src="/images/pbvsfpt.png"
   title="Floating point texture"
-  label="quad"
+  label="textures"
   caption="Floating point textures offer a buffer in which each RGBA channel is encoded with a float, rather than a single byte."
 >}}
 
