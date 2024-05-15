@@ -3,6 +3,32 @@
 {{- partial "header.html" . -}}
 
 <body>
+    <script>
+        function applyTheme(theme) {
+            document.querySelector('html').style.filter = theme === 'dark' ? 'invert(100%)' : 'none';
+            document.documentElement.style.colorScheme = theme === 'dark' ? 'dark' : 'normal';
+        }
+    
+        function applyThemeToImage(id) {
+            const img = document.getElementById(id);
+            if (img) {
+                img.style.filter = getTheme() === 'dark' ? 'invert(100%)' : 'none';
+            }
+        }
+    
+        function getTheme() {
+            const cookies = document.cookie.split('; ');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].split('=');
+                if (cookie[0] === 'theme') {
+                    return cookie[1];
+                }
+            }
+            return 'light';
+        }
+    
+        applyTheme(getTheme());
+    </script>
 
 {{ block "main" . }}{{ end }}
 
