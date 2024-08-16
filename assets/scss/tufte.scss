@@ -68,14 +68,15 @@ body {
     margin-right: auto;
     padding-left: 4.5%;
     font-family: $serif-fonts;
-    background-color: #fffff8; //#f8f8f8 // #fffff8;
-    color: #111; // #111;
+    background-color: #fff; //#f8f8f8 // #fffff8;
+    color: #000; // #000;
     max-width: 1400px;
 }
 
 h1, h2, h3 {
     font-weight: 400;
     line-height: 1;
+    font-weight: bold;
 }
 
 h1 {
@@ -85,7 +86,6 @@ h1 {
 }
 
 h2, h3 {
-    font-style: italic;
     margin-bottom: 0;
 }
 
@@ -97,6 +97,10 @@ h2 {
 h3 {
     font-size: 1.7rem;
     margin-top: 2rem;
+}
+
+h4 {
+    font-weight: bold;
 }
 
 .author, .date {
@@ -254,15 +258,15 @@ figure.fullwidth figcaption {
 /* Links: replicate underline that clears descenders */
 a:link,
 a:visited {
-    color: #A00000 // inherit;
+    color: #00a065 // inherit;
 }
 
 .menu ul li a {
-    color: #111 !important;
+    color: #000 !important;
 }
 
 // .content-title a {
-//     color: #111 !important;
+//     color: #000 !important;
 // }
 
 /* Sidenotes, margin notes, figures, captions */
@@ -285,11 +289,11 @@ img {
 }
 
 .marginnote strong {
-    color: #A00000;
+    color: #00a065;
 }
 
 .sidenote-number {
-    color: #A00000;
+    color: #00a065;
     font-weight: bold;
 }
 

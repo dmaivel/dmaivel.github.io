@@ -46,11 +46,12 @@ hr {
     width: 95%;
     max-width: 55rem;
     border-style: solid none none none;
-    border-color: #111;
+    border-color: #000;
+    border-style: dashed none none none;
 }
 
 kbd {
-  border: 1px #111 solid;
+  border: 1px #000 solid;
   border-radius: 5px;
   padding-right: 2px;
   padding-left: 2px;
@@ -91,7 +92,7 @@ table:not(.lntable) {
 }
 
 table:not(.lntable) tr th {
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid #000;
   text-transform: uppercase;
 }
 
