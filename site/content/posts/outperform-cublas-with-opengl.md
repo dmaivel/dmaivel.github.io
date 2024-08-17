@@ -328,7 +328,7 @@ This means that our reduction summation shader will be called multiple times unt
 
 #### Improvement
 
-| N | mem per vec | sdot (seq) | sdot (v2) | improvement |
+| N | Vector size | sdot (Sequential) | sdot (Reduction) | Improvement |
 | ------ | ------ | ------ | ------ | ------ | ------ |
 | 1024 | 4 KiB | 0.053s | 0.052s | +1.89% |
 | 1048576 | 4 MiB | 0.197s | 0.071s | +63.96% |
@@ -438,7 +438,7 @@ This reordering is done through another shader, copied into another matrix as to
 - Reorder `$B$` if `$B^T$` is `true`
 
 In the end, we see some significant performance gains over the non-optimized shader, particularly with larger matrices. {{< sidenote ind="" >}} Attempting to run the V1 kernel on matrices sized `4096x4096` caused graphical issues and would stall out on `__sched_yield` upon framebuffer/texture deletion, requiring user intervention to close the program. {{< /sidenote >}} However, like the `sdot` shader, we still see somewhat lackluster performance with larger data, indicating there are likely more optimizations to be made.
-| dims | mem per mat | sgemm (1x1) | sgemm (4x4) | improvement |
+| Dimensions | Matrix size | sgemm (1x1) | sgemm (4x4) | Improvement |
 | ------ | ------ | ------ | ------ | ------ | ------ |
 | 64x64 | 16 KiB | 0.053s | 0.050s | +5.66% |
 | 512x512 | 1 MiB | 0.087s | 0.067s | +22.99% |
@@ -452,7 +452,7 @@ In the end, we see some significant performance gains over the non-optimized sha
 
 The results{{< sidenote ind="" >}} Tests were performed on Linux (using DE) using a `GeForce GTX 1050` (`545.29.06`, CUDA Version: `12.3`) {{< /sidenote >}} below are a measure of each of the respective program's entire runtime. This is done to not only benchmark the kernels themselves, but the speed of memory transfer (`cudaMemcpy` vs `glblasMemcpy`) aswell.
 
-| demo | N | mem per vec/mat | cublas | glblas | improvement |
+| Demo | N | Vector/Matrix size | cuBLAS | glBLAS | Improvement |
 | ------ | ------ | ------ | ------ | ------ | ------ |
 | saxpy | 1024 | 4 KiB | 0.138s | **0.083s** | +39.86% |
 | saxpy | 1048576 | 4 MiB | 0.150s | **0.100s** | +33.33% |
@@ -477,9 +477,9 @@ The same issue was experienced with running the `sgemm` demo using the non-4x4 i
 
 ## Closing remarks
 
-Reflecting on all that has been discussed, running compute intensive calculations through the rendering pipeline is clearly possible. Writing performant and functional kernels purely in fragment shaders, however, is very much so a pain. Drivers across different vendors are very different from each other, meaning unless extensively tested, this project could have significantly varying performance. Even on the same system, the benchmarks can be very inconsistent as it appears the demos begin to slow down with extended uptimes. These inconsistencies are coupled with the fact that these kernels can hog the graphics pipeline when processing large amounts of data for extended periods of time, taking away resources from other graphical tasks. 
+Reflecting on all that has been discussed, running compute intensive calculations through the rendering pipeline is clearly possible. Writing performant and functional kernels purely in fragment shaders, however, is quite a pain. Drivers across different vendors have their own respective quirks, meaning unless extensively tested, this project could have very inconsitent performance. Even on the same system, the benchmarks can become skewed as it appears the demos begin to slow down with extended uptimes. These inconsistencies are coupled with the fact that these kernels hog the graphics pipeline when processing large amounts of data for extended periods of time, taking away resources from other graphical tasks. 
 
-Nonetheless compute over fragment shaders proved to be quite effective for small to medium-sized data. On the other hand, I can't quite say the same for the largest batches of data, in which case you may want to stick to better optimized compute libraries.
+Nonetheless compute over fragment shaders proved to be quite viable for small to medium-sized data. As for the larger batches of data, you would want to stick to real compute libraries.
 
 ## Source code
 

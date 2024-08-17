@@ -1,6 +1,6 @@
 ---
 title: "Virtualization in usermode"
-subtitle: "Can we really run kernels in userland?"
+subtitle: "Can we run kernels in userland?"
 date: 2023-06-17
 hideReadTime: true
 meta: true
@@ -77,8 +77,7 @@ Now that we've defined the architecture for our usermode "hypervisor", we've ran
 Shared memory regions can be created using the following:
 
 ```c
-mmap(address, length, PROT_READ | PROT_WRITE | PROT_EXEC,
-  MAP_SHARED | MAP_ANONYMOUS | MAP_FIXED, -1, 0);
+mmap(address, length, PROT_READ | PROT_WRITE | PROT_EXEC, MAP_SHARED | MAP_ANONYMOUS | MAP_FIXED, -1, 0);
 ```
 
 Here, `length` defines the size of the region in bytes, and `address` defines the exact address this memory will be mapped to. By utilizing `MAP_FIXED`, we can effectively map our memory to any address.

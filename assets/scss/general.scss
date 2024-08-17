@@ -92,13 +92,13 @@ table:not(.lntable) {
 }
 
 table:not(.lntable) tr th {
-  border-bottom: 1px solid #000;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 table:not(.lntable) tr th,
 table:not(.lntable) tr td {
     padding-right: 0.5rem;
+    border-bottom: 1px dashed #000;
 }
 
 table.lntable {
