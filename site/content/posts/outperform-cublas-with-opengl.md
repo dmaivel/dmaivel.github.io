@@ -53,15 +53,6 @@ An issue that becomes apparent regarding the pixel buffer is how exactly will we
 
 We will use `GL_RGBA32F`, as it allows for a vectorized representation of our data, processing 4 floats per fragment, likely allowing us *(best case scenario)* to sample our textures once per 4 floats instead of once per each float.
 
-{{< figure
-  src="/images/pbvsfpt.png"
-  title="Floating point texture"
-  label="textures"
-  caption="Floating point textures offer a buffer in which each RGBA channel is encoded with a float, rather than a single byte."
->}}
-
-Texture creation results in a buffer whose dimensions are `$width * height * 4$`.
-
 ### Buffer creation
 
 Before creating GPU-bound buffers, we need to define a maximum width and height for our window's pixel buffer, which will act as the largest buffer our library can process. Once again, this is quite a trivial step as it simply requires passing the width and height of our pixel buffer to the GL backend (EGL) to properly configure, the same way we would set the dimensions of a window. 
