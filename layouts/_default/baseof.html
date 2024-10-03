@@ -28,6 +28,27 @@
         }
     
         applyTheme(getTheme());
+
+        if (!document.title.includes('Home')) {
+            document.querySelector('body').style = 'transform: translateX(-25%);';
+
+            const style = document.createElement('style');
+            style.type = 'text/css';
+
+            const css = `
+            @media (max-width: 768px) {
+                body {
+                    transform: translateX(0%) !important;
+                }
+            }`;
+
+            if (style.styleSheet)
+                style.styleSheet.cssText = css;
+            else
+                style.appendChild(document.createTextNode(css));
+
+            document.head.appendChild(style);
+        }
     </script>
 
 {{ block "main" . }}{{ end }}

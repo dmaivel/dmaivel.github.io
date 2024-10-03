@@ -8,7 +8,7 @@
 /* Generic content, such as the index list pages */
 /* ------------------------------------------------------------------------ */
 :root * {
-      text-align: left;
+      text-align: justify;
       text-rendering: optimizeLegibility;
 }
 
@@ -43,8 +43,8 @@ hr {
     margin-left: 0;
     margin-top: 1.4rem;
     margin-bottom: 1.4rem;
-    width: 95%;
-    max-width: 55rem;
+    width: 100%;
+    // max-width: 55rem;
     border-style: solid none none none;
     border-color: #000;
     border-style: dashed none none none;
@@ -117,7 +117,7 @@ table.lntable {
 }
 
 .footnotes ol {
-    width: 55%;
+    width: 95%;
     margin-top: 4.4rem;
 
     li {
