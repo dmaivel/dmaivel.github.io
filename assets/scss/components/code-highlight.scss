@@ -19,6 +19,7 @@ $ht-code-border-radius: .4em;
     code {
         font-size: 1rem;
         display: block;
+        border: none !important;
     }
 
     &>.chroma {
