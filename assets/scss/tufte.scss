@@ -283,7 +283,7 @@ figure.fullwidth figcaption {
 /* Links: replicate underline that clears descenders */
 a:link,
 a:visited {
-    color: #00a065 // inherit;
+    color: #568400 // inherit;
 }
 
 .menu ul li a {
@@ -314,12 +314,16 @@ img {
 }
 
 .marginnote strong {
-    color: #00a065;
+    color: #568400;
 }
 
 .sidenote-number {
-    color: #00a065;
+    color: #568400;
     font-weight: bold;
+}
+
+table {
+    margin: auto;
 }
 
 .table-caption {
