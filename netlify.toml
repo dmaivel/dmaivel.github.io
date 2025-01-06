@@ -1,6 +1,0 @@
-[build]
-command = "cd site && hugo --buildDrafts --minify --gc --themesDir .. --theme ."
-publish = "site/public"
-
-[build.environment]
-HUGO_THEME = "hugo-tufte"
