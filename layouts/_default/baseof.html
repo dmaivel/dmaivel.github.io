@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" charset="utf-8">
+<head>
+<link rel="icon" href="{{ .Site.Params.favicon | relURL }}" type="image/x-icon">
+<style>
+  body {
+    line-height: 1.4;
+    font-size: 16px;
+    padding: 0 10px;
+    margin: 50px auto;
+    max-width: 650px;
+    text-align: justify;
+    font-family: "Liberation Serif", Georgia, Times, "Times New Roman", serif;
+  }
+
+  #suggestions {
+    max-width: 42em;
+    margin: 15px auto;
+  }
+
+  footer {
+    position: absolute;
+    left: 5px;
+    bottom: 0;
+  }
+
+  img {
+    width: 75%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
+    img {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  pre {
+    background-color: #f8f9fa;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px #bbb solid;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px;
+    -webkit-text-size-adjust: 120%;
+  }
+
+  figure {
+    border: #bbb 1px solid;
+    border-radius: 5px;
+    padding: 4px;
+  }
+  figcaption h4 {
+    text-align: center;
+  }
+
+  .note {
+    display: inline-block;
+    position: relative;
+    color: blue;
+    font-size: inherit;
+  }
+
+  .note-toggle {
+    cursor: pointer;
+    font-style: italic;
+    border: none;
+    background: none;
+    padding: 0;
+    border-bottom: 1px dotted;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    -webkit-text-size-adjust: 140%;
+    text-size-adjust: 100%;
+  }
+
+  .note-toggle:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+  }
+
+  .note-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 1em;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 100;
+    min-width: 200px;
+    max-width: 400px;
+    color: black;
+    font-size: inherit;
+    -webkit-text-size-adjust: 140%;
+    text-size-adjust: 100%;
+    text-align: left;
+  }
+
+  .note-toggle[aria-expanded="true"] + .note-content {
+    display: block;
+  }
+
+  code {
+    -webkit-text-size-adjust: 140%;
+  }
+
+  .footnotes p {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word;
+  }
+</style>
+<script>
+  (function() {
+    document.addEventListener('DOMContentLoaded', function() {
+      const buttons = document.querySelectorAll('.note-toggle');
+      
+      buttons.forEach(button => {
+        if (!button.hasAttribute('data-initialized')) {
+          button.setAttribute('data-initialized', 'true');
+          button.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+            const content = this.nextElementSibling;
+            content.setAttribute('aria-hidden', expanded);
+
+            buttons.forEach(otherButton => {
+              if (otherButton !== this && otherButton.getAttribute('aria-expanded') === 'true') {
+                otherButton.setAttribute('aria-expanded', 'false');
+                otherButton.nextElementSibling.setAttribute('aria-hidden', 'true');
+              }
+            });
+          });
+        }
+      });
+  
+      document.addEventListener('click', function(event) {
+        if (!event.target.closest('.note')) {
+          buttons.forEach(button => {
+            button.setAttribute('aria-expanded', 'false');
+            button.nextElementSibling.setAttribute('aria-hidden', 'true');
+          });
+        }
+      });
+  
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          buttons.forEach(button => {
+            button.setAttribute('aria-expanded', 'false');
+            button.nextElementSibling.setAttribute('aria-hidden', 'true');
+          });
+        }
+      });
+    });
+  })();
+</script>
+</head>
+<body>
+	{{ block "main" . }}
+	{{ end }}
+</body>
+</html>

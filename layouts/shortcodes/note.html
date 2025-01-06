@@ -1,0 +1,14 @@
+{{ $type := .Get "type" | default "note" }}
+<span class="note {{ $type }}">
+  <button 
+    class="note-toggle" 
+    aria-expanded="false"
+    aria-controls="note-{{ .Ordinal }}"
+  >{{ .Get "title" | markdownify }}</button>
+  <span 
+    id="note-{{ .Ordinal }}" 
+    class="note-content" 
+    role="region" 
+    aria-hidden="true"
+  >{{ .Inner | markdownify }}</span>
+</span>

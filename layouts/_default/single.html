@@ -1,0 +1,9 @@
+{{ define "main" }}
+  <title>{{ .Title }} - dmaivel</title>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <a href="/">home</a>
+  <h1>{{ .Title }}</h1>
+  <h4>({{ .Date.Format "2006-01-02" }}): <span style="font-weight: normal; font-style: italic;">{{ .Params.subtitle }}</span></h4>
+  {{ .Content }}
+{{ end }}

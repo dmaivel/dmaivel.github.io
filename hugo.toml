@@ -1,0 +1,16 @@
+disableKinds = ['taxonomy', 'term']
+baseURL = 'https://dmaivel.com/'
+languageCode = 'en-us'
+title = 'dmaivel'
+[markup]
+  [markup.highlight]
+    style = "github"
+[markup.goldmark.renderer]
+  unsafe = true
+[markup.goldmark.extensions.passthrough]
+  enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+  block = [['\[', '\]'], ['$$', '$$']]
+  inline = [['\(', '\)'], ['$', '$']]
+[params]
+  favicon = "./favicon.ico"
