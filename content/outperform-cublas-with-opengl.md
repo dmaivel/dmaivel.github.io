@@ -113,7 +113,7 @@ With the major components of memory management and headless rendering initializa
 
 #### Definition
 
-\(y=\alpha x + y\)
+$ y=\alpha x + y $
 
 #### Pseudocode
 
@@ -123,7 +123,7 @@ saxpy(int N, float alpha, const float *x, int incx, float *y, int incy);
 
 #### Discussion
 
-`saxpy` defines a vector addition operation, in which we add a vector `x` multiplied by a scalar \(\alpha\) to the vector `y`.
+`saxpy` defines a vector addition operation, in which we add a vector `x` multiplied by a scalar $ \alpha $ to the vector `y`.
 
 Where the parameters are defined as:
   - `N`: Elements in `y`
@@ -230,7 +230,7 @@ With that, the most fundamental operation of vector addition is complete.
 
 #### Definition
 
-\(result=x \cdot y\)
+$ result=x \cdot y $
 
 #### Pseudocode
 
@@ -330,7 +330,7 @@ Although the performance is still quite lackluster with larger vectors, it is a 
 
 #### Definition
 
-\(C=\alpha AB + \beta C\)
+$ C=\alpha AB + \beta C $
 
 #### Pseudocode
 
@@ -361,7 +361,7 @@ The general matrix multiply operation can be visualized below, where matrices `A
   caption="The diagram visualizes how data from matrices `A` and `B` determine the result of elements in `C`."
 >}}
 
-Like previous shaders, we calculate the current index, only sample the `C` texture if \(\beta \neq 0\), and check if the current index plus the current element offset is less than the maximum index. Within the shader, before going into the actual kernels, we first determine the dimensions of our matrices:
+Like previous shaders, we calculate the current index, only sample the `C` texture if $ \beta \neq 0 $, and check if the current index plus the current element offset is less than the maximum index. Within the shader, before going into the actual kernels, we first determine the dimensions of our matrices:
 
 ```c
 int ax = aT ? k : int(adims.x);
@@ -421,8 +421,8 @@ This reordering/transposition allows us to cut down on texture sampling by a fac
 
 This reordering is done through another shader, copied into another matrix as to not modify the user's matrix. Although we now have two draw calls (one to reorder, one performing matrix multiplication) and memory allocation/deallocation, we managed to outperform our original shader. It should be noted that we only need to reorder for these specific cases *(dependent on user input regarding transposition)*:
 
-- Reorder \(A\) if \(A^T\) is `false`
-- Reorder \(B\) if \(B^T\) is `true`
+- Reorder $ A $ if $ A^T $ is `false`
+- Reorder $ B $ if $ B^T $ is `true`
 
 In the end, we see some significant performance gains over the non-optimized shader, particularly with larger matrices. However, like the `sdot` shader, we still see somewhat lackluster performance with larger data, indicating there are likely more optimizations to be made.
 | Dimensions | Matrix size | sgemm (1x1) | sgemm (4x4) | Improvement |
