@@ -3,6 +3,16 @@
 <head>
 <link rel="icon" href="{{ .Site.Params.favicon | relURL }}" type="image/x-icon">
 <style>
+html {
+  -webkit-text-size-adjust: 100%; /* iOS and Safari */
+  -moz-text-size-adjust: 100%; /* Firefox */
+  -ms-text-size-adjust: 100%; /* IE/Edge */
+  text-size-adjust: 100%; /* Standard property */
+}
+* {
+  -webkit-font-smoothing: antialiased; /* For macOS/iOS */
+  -moz-osx-font-smoothing: grayscale; /* For Firefox on macOS */
+}
   body {
     line-height: 1.4;
     font-size: 16px;
@@ -11,6 +21,8 @@
     max-width: 650px;
     text-align: justify;
     font-family: serif;
+    background-color: #fff;
+    color: #000
   }
 
   #suggestions {
@@ -38,10 +50,8 @@
   }
 
   pre {
-    background-color: #f8f9fa;
     padding: 1em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 1px solid #111;
     overflow-x: auto;
     font-size: 14px;
     line-height: 1.5;
@@ -50,18 +60,18 @@
   table,
   th,
   td {
-    border: 1px #bbb solid;
+    border: 1px #000 solid;
+    background-color: #fff;
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
     padding: 4px;
-    -webkit-text-size-adjust: 120%;
+    /*-webkit-text-size-adjust: 120%;*/
   }
 
   figure {
-    border: #bbb 1px solid;
-    border-radius: 5px;
-    padding: 4px;
+    border: #111 1px solid;
+    padding: 16px;
   }
   figcaption h4 {
     text-align: center;
@@ -71,6 +81,7 @@
     display: inline-block;
     position: relative;
     color: blue;
+    /*color: blue;*/
     font-size: inherit;
   }
 
@@ -84,7 +95,7 @@
     font-size: inherit;
     font-family: inherit;
     color: inherit;
-    -webkit-text-size-adjust: 140%;
+    /*-webkit-text-size-adjust: 140%;*/
     text-size-adjust: 100%;
   }
 
@@ -98,17 +109,18 @@
     position: absolute;
     left: 0;
     top: 100%;
-    background: white;
+    background: #fff;
+    /*background: white;*/
     border: 1px solid #ddd;
     padding: 1em;
-    border-radius: 4px;
+    border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     z-index: 100;
     min-width: 200px;
     max-width: 400px;
     color: black;
     font-size: inherit;
-    -webkit-text-size-adjust: 140%;
+    /*-webkit-text-size-adjust: 140%;*/
     text-size-adjust: 100%;
     text-align: left;
   }
@@ -118,7 +130,7 @@
   }
 
   code {
-    -webkit-text-size-adjust: 140%;
+    /*-webkit-text-size-adjust: 140%;*/
   }
 
   .footnotes p {
@@ -127,6 +139,31 @@
     white-space: -pre-wrap;
     white-space: -o-pre-wrap; 
     word-wrap: break-word;
+  }
+
+  .toc-container {
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 1px solid #111;
+    background-color: #f8f8f8;
+  }
+
+  .toc-header {
+    padding: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .toc-content {
+    padding: 0 1rem 1rem 0rem;
+  }
+
+  .toc-content ul {
+    margin-bottom: 0;
+  }
+
+  .toc-container:focus {
+    outline: 2px solid #0077cc;
   }
 </style>
 <script>
@@ -174,6 +211,7 @@
     });
   })();
 </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 </head>
 <body>
 	{{ block "main" . }}

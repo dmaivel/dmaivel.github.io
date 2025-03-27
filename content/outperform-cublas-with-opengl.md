@@ -8,7 +8,7 @@ Compute libraries, like CUDA and OpenCL, are responsible for handling the comput
 
 In this article, we explore the bare-bones of a compute library, the implementations of kernels like `saxpy`, `sdot`, and `sgemm`, and compare the performance of compute over the rendering pipeline to that of `cuBLAS`.
 
-## Design
+## design
 
 Our library will make use of *fragment shaders*, rather than the {{< note title="\"new\"" >}} Computer shaders were introduced in 2012. {{< /note >}} *compute shaders* included in OpenGL 4.3 and above. The goal of this project is achieving performant compute through the rendering pipeline, which compute shaders are not a part of[^1].
 
@@ -40,7 +40,7 @@ unsigned int indices[] = {
 
 In addition to generating and binding the buffers, you must enable the *position attribute* and the *texture coord attribute*. Given this, we should now have a pixel buffer which spans the entire fake window.
 
-## Pixels as storage
+## pixels as storage
 
 An issue that becomes apparent regarding the pixel buffer is how exactly will we store floats, when pixels are typically encoded using 1 byte per channel. As it turns out, we do not need to encode floats ourselves, as OpenGL includes a series of floating point textures. Such textures include[^3]:
  - `GL_RGBA32F`: each pixel contains 4 32-bit floats
@@ -49,7 +49,7 @@ An issue that becomes apparent regarding the pixel buffer is how exactly will we
 
 We will use `GL_RGBA32F`, as it allows for a vectorized representation of our data, processing 4 floats per fragment, likely allowing us *(best case scenario)* to sample our textures once per 4 floats instead of once per each float.
 
-### Buffer creation
+### buffer creation
 
 Before creating GPU-bound buffers, we need to define a maximum width and height for our window's pixel buffer, which will act as the largest buffer our library can process. Once again, this is quite a trivial step as it simply requires passing the width and height of our pixel buffer to the GL backend (EGL) to properly configure, the same way we would set the dimensions of a window. 
 
@@ -93,7 +93,7 @@ Using this function, we can set the dimensions of our textures according to the 
   caption="`N` refers to the number of floats within our buffer. We add padding so our textures are shaped rectangular. For this image to be completely accurate, multiply the `N`s by 4. $$width = \begin{cases} N, & \text{if } N \leq w_{max} \\ w_{max}, & \text{otherwise} \end{cases}$$ $$height = \begin{cases} 1, & \text{if } N \leq w_{max} \\ \lceil \frac{N}{w_{max}} \rceil, & \text{otherwise} \end{cases}$$ $$padded = \begin{cases} 1, & \text{if } \lfloor \frac{\text{size}}{16} \rceil \neq \frac{\text{size}}{16} \\ 0, & \text{otherwise} \end{cases}$$"
 >}}
 
-### Copying memory
+### copying memory
 
 To get data to and from our textures, we need to build a specialized `memcpy` function. Before copying any memory around, we need to prepare the host to either send or receive. This is done by either:
  - Host to GPU: Copy `src` to `safe_buffer` whose size is based on the max dimensions, then `glTexSubImage2D` into the texture.
@@ -103,7 +103,7 @@ A safe buffer is required due to potentially reading/writing memory out of bound
 
 Although a safe buffer avoids the risk of memory corruption, it greatly reduces performance when working with large quantities of data. This is because we would be moving data from the host twice, once to the safe buffer, then to the GPU. We only actually need a safe buffer if there is padding within the texture, since no padding means the buffer the user provides will be the correct size.
 
-## Kernels
+## kernels
 
 With the major components of memory management and headless rendering initialization out of the way, we can begin writing the compute kernels. We base our kernels off of the BLAS specification, which outlines a set of routines for performing linear algebra operations. Note that all the kernels below are prefixed with an `s`, indicating the use of single precision floats. This conforms with our previously established image format of `GL_RGBA32F`, which handles 32-bit floats.
 
@@ -111,17 +111,17 @@ With the major components of memory management and headless rendering initializa
 
 ### saxpy
 
-#### Definition
+#### definition
 
 $ y=\alpha x + y $
 
-#### Pseudocode
+#### pseudocode
 
 ```c
 saxpy(int N, float alpha, const float *x, int incx, float *y, int incy);
 ```
 
-#### Discussion
+#### discussion
 
 `saxpy` defines a vector addition operation, in which we add a vector `x` multiplied by a scalar $ \alpha $ to the vector `y`.
 
@@ -228,17 +228,17 @@ With that, the most fundamental operation of vector addition is complete.
 
 ### sdot
 
-#### Definition
+#### definition
 
 $ result=x \cdot y $
 
-#### Pseudocode
+#### pseudocode
 
 ```c
 sdot(int N, float *result, const float *x, int incx, const float *y, int incy);
 ```
 
-#### Discussion
+#### discussion
 
 The dot product is an interesting kernel to implement, since the result is a scalar, rather than a vector. A naive implementation may approach this problem with the following implementation, where we calculate the dot product within a single fragment call:
 
@@ -267,7 +267,7 @@ As such, we can instead divide the dot product into two distinct operations:
 
 By splitting the dot product into these two operations, we can maximize parallelism using a single shader call for the first step, and utilizing a technique called reduction for the second step.
 
-#### Step 1: Multiplication kernel
+#### step 1: multiplication kernel
 
 There isn't anything complicated regarding the multiplication kernel. In fact, we can re-use the previously implemented `saxpy` kernel and change a single line (and remove `alpha`) to perform multiplication instead of addition. 
 
@@ -285,7 +285,7 @@ vy.elem *= val;
 
 With that, the multiplication portion of the dot product performs with about the same speed as the `saxpy` kernel.
 
-#### Step 2: Summation kernel
+#### step 2: summation kernel
 
 The summation operation is where we face our biggest slowdowns. To combat this, our shader employs a technique called reduction, in which per every shader call, we cut the size of our vector in half by adding the second half to the first half repeatedly until we are only left with a single element:
 
@@ -313,7 +313,7 @@ for (int i = N; i != 1; i /= 2)
 
 This means that our reduction summation shader will be called multiple times until we reach the final element.
 
-#### Improvement
+#### improvement
 
 | N | Vector size | sdot (Sequential) | sdot (Reduction) | Improvement |
 | ------ | ------ | ------ | ------ | ------ |
@@ -328,11 +328,11 @@ Although the performance is still quite lackluster with larger vectors, it is a 
 
 ### sgemm
 
-#### Definition
+#### definition
 
 $ C=\alpha AB + \beta C $
 
-#### Pseudocode
+#### pseudocode
 
 ```c
 sgemm(bool aT, bool bT,
@@ -342,7 +342,7 @@ sgemm(bool aT, bool bT,
       float *C, int ldc);
 ```
 
-#### Discussion
+#### discussion
 
 The general matrix multiply is challenging function to implement, with regard to achieving the highest performance possible. The implementation of the general matrix multiply kernel could either be:
 1. Written as a new shader
@@ -395,7 +395,7 @@ In the end, our "dot product" result will be in `val`, allowing us to finish wit
 ```c
 vy.elem = (alpha * val) + (vy.elem * beta);
 ```
-#### Optimization
+#### optimization
 
 At a glance, it may appear there is little room for optimization, given that I've stated earlier that methods like reduction for large matrices don't work out well with regard to speed due to the extensive draw calls. However, we can employ a different technique for significant speedups, particularly with matrices whose shapes are multiples of `4x4`.
 
@@ -435,7 +435,7 @@ In the end, we see some significant performance gains over the non-optimized sha
 
 ---
 
-## Results
+## results
 
 The {{< note title="results" >}} Tests were performed on Linux (using DE) using a `GeForce GTX 1050` (`545.29.06`, CUDA Version: `12.3`) {{< /note >}} below are a measure of each of the respective program's entire runtime. This is done to not only benchmark the kernels themselves, but the speed of memory transfer (`cudaMemcpy` vs `glblasMemcpy`) aswell.
 
@@ -454,7 +454,7 @@ The {{< note title="results" >}} Tests were performed on Linux (using DE) using 
 | sgemm | 1024x1024 | 4 MiB | 0.136s | **0.115s** | +15.44% |
 | sgemm | 4096x4096 | 64 MiB | **0.335s** | 2.377s | -609.55% |
 
-### Observations
+### observations
 
 During the benchmarking process, an interesting issue arose regarding the implementation of `glblasMemcpy`, particularly focusing on uploading buffers from the host to the GPU. The function call to `glTexSubImage2D` is typically fast enough that for large buffers *(e.g) 8192x8192x4* that the delay is quite small, averaging about 0.34 seconds, but in some scenarios *(possibly extended uptimes, rerunning the program too many times, driver issues, not freeing textures/framebuffers, etc.)* this delay can jump up to 1.5 seconds, leading to undesirable benchmark results. Moving data from the GPU back to the host seemed unaffected, as it calls `glReadPixels`.
 
@@ -462,13 +462,13 @@ Another issue that arose was my entire system briefly lagging when running the `
 
 The same issue was experienced with running the `sgemm` demo using the non-4x4 implementation, in which the system would briefly lag and even (rarely) crash another graphical application. Unlike the `sdot` demo, however, it would not close on its own. When debugging, I had found that it stalled at `__sched_yield`, with the call stack indicating the call was to `glDeleteFramebuffers`.
 
-## Closing remarks
+## closing remarks
 
 Reflecting on all that has been discussed, running compute intensive calculations through the rendering pipeline is clearly possible. Writing performant and functional kernels purely in fragment shaders, however, is quite a pain. Drivers across different vendors have their own respective quirks, meaning unless extensively tested, this project could have very inconsitent performance. Even on the same system, the benchmarks can become skewed as it appears the demos begin to slow down with extended uptimes. These inconsistencies are coupled with the fact that these kernels hog the graphics pipeline when processing large amounts of data for extended periods of time, taking away resources from other graphical tasks. 
 
 Nonetheless compute over fragment shaders proved to be quite viable for small to medium-sized data. As for the larger batches of data, you would want to stick to real compute libraries.
 
-## Source code
+## source code
 
 [https://github.com/dmaivel/glBLAS](https://github.com/dmaivel/glBLAS)
 

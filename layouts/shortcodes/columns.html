@@ -1,0 +1,8 @@
+{{/* layouts/shortcodes/columns.html */}}
+<div style="display: grid; width: 100%; grid-template-columns: repeat({{ len (split .Inner "<--->") }}, 1fr); gap: 20px;">
+    {{ range split .Inner "<--->" }}
+        <div style="min-width: 0; overflow-wrap: break-word;">
+            {{ . | markdownify }}
+        </div>
+    {{ end }}
+</div>
