@@ -1,7 +1,16 @@
+<style>
+.line {
+  display: flex;
+  justify-content: space-between;
+}
+</style>
 <ul>
   {{ range .Site.RegularPages.ByDate.Reverse }}
     <li>
-      ({{ .Date.Format "2006-01-02" }}) <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+       <div class="line">
+        <span><a href="{{ .RelPermalink }}">{{ .Title }}</a></span>
+        <span>{{ .Date.Format "2 Jan 2006" }}</span>
+      </div>
     </li>
   {{ end }}
 </ul>
