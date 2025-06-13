@@ -4,8 +4,8 @@ languageCode = 'en-us'
 title = 'dmaivel'
 [markup]
   [markup.highlight]
-    style = "pygments"
-    noClasses=true
+    style = "vs"
+    noClasses=false
 [markup.goldmark.renderer]
   unsafe = true
 [markup.goldmark.extensions.passthrough]

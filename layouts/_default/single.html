@@ -11,16 +11,31 @@
     };
   </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>    
+  <br>
+  <style>
+    .landscape-check {
+      display: none;
+    }
 
-  <a href="/">home</a>
-  <h1>{{ .Title }}</h1>
-  <h4>({{ .Date.Format "2 Jan 2006" }}): <span style="font-weight: normal; font-style: italic;">{{ .Params.subtitle }} (~{{ .ReadingTime }} mins read)</span></h4>
-  <!--{{ .TableOfContents }}-->
-<details class="toc-container">
-  <summary class="toc-header">table of contents</summary>
-  <div class="toc-content">
-    {{ .TableOfContents }}
+    @media screen and (orientation:portrait) {
+      .landscape-check {
+        display: block;
+      }
+    }
+  </style>
+  <div class="landscape-check" style="color: #e64553; border: 1px solid #e64553; padding: 4px; margin-bottom: 12px;">
+    viewing in landscape mode is advised
   </div>
-</details>
+  <div style="display: flex; justify-content: space-between;">
+    <div>
+    {{ partial "post-tags.html" . }}
+    </div>
+    <div style="text-align: right;">
+      {{ .WordCount }} words • {{ .ReadingTime }} mins
+    </div>
+  </div>
+  <h1 style="margin-bottom: 0; margin-top: 12px;">{{ .Title }}</h1>
+  <div style="font-family: Roboto, sans-serif; color: #bbb;">{{ .Date.Format "Jan 02, 2006" }}</div>
+  <!--{{ .TableOfContents }}-->
   {{ .Content }}
 {{ end }}

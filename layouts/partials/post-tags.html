@@ -1,0 +1,29 @@
+{{ $context := . }}
+{{ $style := "inline" }}
+
+{{ if reflect.IsMap . }}
+  {{ $context = .context | default . }}
+  {{ $style = .style | default "inline" }}
+{{ end }}
+  
+  <div class="post-tags post-tags--{{ $style }}">
+    {{ if $context.Params.category }}
+      <span class="post-tag post-tag--category" data-category="{{ $context.Params.category | lower | replaceRE `[^a-z0-9]+` `-` }}">
+        {{ $context.Params.category }}
+      </span>
+    {{ else if $context.Section }}
+      <span class="post-tag post-tag--category" data-category="{{ $context.Section | lower | replaceRE `[^a-z0-9]+` `-` }}">
+        {{ $context.Section | title }}
+      </span>
+    {{ end }}
+    
+    {{ range $context.Params.tags }}
+      <span class="post-tag post-tag--tag" data-tag="{{ . | lower | replaceRE `[^a-z0-9]+` `-` }}">
+        {{ . }}
+      </span>
+    {{ end }}
+    
+    {{ if and (not $context.Params.category) (not $context.Section) (not $context.Params.tags) }}
+      <span class="post-tag post-tag--category" data-category="blog">Blog</span>
+    {{ end }}
+  </div>

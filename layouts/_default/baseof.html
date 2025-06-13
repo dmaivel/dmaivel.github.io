@@ -3,16 +3,21 @@
 <head>
 <link rel="icon" href="{{ .Site.Params.favicon | relURL }}" type="image/x-icon">
 <link rel="preload" href="/fonts/Roboto-VariableFont_wdth,wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/CascadiaMono-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/RobotoSlab-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ "css/vs-dark.css" | relURL }}">
 <style>
 html {
   -webkit-text-size-adjust: 100%; /* iOS and Safari */
   -moz-text-size-adjust: 100%; /* Firefox */
   -ms-text-size-adjust: 100%; /* IE/Edge */
   text-size-adjust: 100%; /* Standard property */
+  color-scheme: dark;
 }
 * {
-  -webkit-font-smoothing: antialiased; /* For macOS/iOS */
-  -moz-osx-font-smoothing: grayscale; /* For Firefox on macOS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 @font-face {
@@ -23,24 +28,59 @@ html {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'CascadiaMono';
+  src: url('/fonts/CascadiaMono-VariableFont_wght.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RobotoSlab';
+  src: url('/fonts/RobotoSlab-VariableFont_wght.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
   body {
-    line-height: 1.4;
     font-size: 16px;
     padding: 0 10px;
     margin: 50px auto;
+    margin-top: 20px;
     max-width: 850px;
     text-align: left;
-    font-family: Roboto, sans-serif;
-    background-color: #fff;
-    color: #000
+    font-family: RobotoSlab, sans-serif;
+    background-color: #181818;
+    color: #eee
+  }
+
+  h1, h2, h3, h4, h5, h6, .post-date, .post-tag {
+    font-family: Roboto, sans-serif
+  }
+
+  code {
+    font-family: CascadiaMono, monospace;
+    font-size: 15px;
+  }
+
+  pre {
+    border: dashed 1px #444;
+  }
+
+  hr {
+    border: dashed 1px #444;
   }
 
   h1 {
     text-align: left;
+    color: #eee;
+    font-size: 42px;
   }
 
   a {
-    color: blue;
+    color: #9e9eff;
   }
 
   #suggestions {
@@ -72,14 +112,13 @@ html {
     /*border: 1px solid #111;*/
     overflow-x: auto;
     font-size: 14px;
-    line-height: 1.5;
+    /* line-height: 1.5; */
   }
 
   table,
   th,
   td {
-    border: 1px #000 solid;
-    background-color: #fff;
+    border: 1px lightgray solid;
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
@@ -98,7 +137,7 @@ html {
   .note {
     display: inline-block;
     position: relative;
-    color: blue;
+    color: #9e9eff;
     /*color: ;*/
     font-size: inherit;
   }
@@ -118,7 +157,7 @@ html {
   }
 
   .note-toggle:focus {
-    outline: 2px solid #000;
+    outline: 2px dotted #fff;
     outline-offset: 2px;
   }
 
@@ -127,16 +166,16 @@ html {
     position: absolute;
     left: 0;
     top: 100%;
-    background: #fff;
+    background: #242424;
     /*background: white;*/
-    border: 1px solid #ddd;
+    border: 1px solid #222;
     padding: 1em;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     z-index: 100;
     min-width: 200px;
     max-width: 400px;
-    color: black;
+    color: #eee;
     font-size: inherit;
     /*-webkit-text-size-adjust: 140%;*/
     text-size-adjust: 100%;
@@ -183,6 +222,69 @@ html {
   .toc-container:focus {
     outline: 2px solid #0077cc;
   }
+
+/* Base tag styles */
+.post-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.post-tags--inline {
+  display: inline-flex;
+}
+
+.post-tags--block {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.post-tag {
+  display: inline-block;
+  color: #fff;
+  /* border-radius: 4px; */
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  padding: 4px 12px;
+  font-size: 12px;
+}
+
+.post-tag:hover {
+  opacity: 0.8;
+}
+
+/* Default colors */
+.post-tag--category {
+  background: #20b2aa;
+}
+
+.post-tag--tag {
+  background: #3498db;
+}
+
+.post-tag[data-tag="security"] { background: #e74c3c; }
+.post-tag[data-tag="kernel"] { background: #9b59b6; }
+.post-tag[data-tag="reverse-engineering"] { background: #b28be1; }
+.post-tag[data-tag="windows"] { background: #74c7ec; }
+.post-tag[data-tag="x86-internals"] { background: #da7591; }
+.post-tag[data-tag="exploit"] { background: #c0392b; }
+.post-tag[data-tag="research"] { background: #66aba1; }
+.post-tag[data-tag="assembly"] { background: #d7875f; }
+.post-tag[data-tag="debugging"] { background: #27ae60; }
+.post-tag[data-tag="programming"] { background: #959fde; }
+.post-tag[data-tag="tutorial"] { background: #f1c40f; color: #eee; }
+.post-tag[data-tag="analysis"] { background: #95a5a6; }
+
+.post-tag[data-category="windows-internals"] { background: #20b2aa; }
+.post-tag[data-category="security"] { background: #e74c3c; }
+.post-tag[data-category="development"] { background: #3498db; }
+.post-tag[data-category="research"] { background: #9b59b6; }
+.post-tag[data-category="tutorial"] { background: #f39c12; }
+.post-tag[data-category="blog"] { background: #95a5a6; }
 </style>
 <script>
   (function() {
@@ -232,6 +334,7 @@ html {
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 </head>
 <body>
+  {{ partial "nav.html" . }}
 	{{ block "main" . }}
 	{{ end }}
 </body>

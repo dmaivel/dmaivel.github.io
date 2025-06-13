@@ -2,6 +2,7 @@
 title: "outperform cublas with opengl"
 subtitle: "writing BLAS routines in fragment shaders."
 date: 2024-05-05
+tags: ["programming", "research"]
 ---
 
 Compute libraries, like CUDA and OpenCL, are responsible for handling the compute pipeline over the GPU, offering acceleration for intensive mathematical routines like matrix multiplication. Compute has even been introduced in graphics libraries as an independent pipeline, including OpenGL and Vulkan, in the form of compute shaders. But, do we really need these new compute shaders? Couldn't we hack something together without using a seperate pipeline? What we're really trying to answer is: is it possible to exploit the regular old graphics pipeline to achieve performance above that of compute libraries using fragment shaders?
@@ -12,14 +13,40 @@ In this article, we explore the bare-bones of a compute library, the implementat
 
 Our library will make use of *fragment shaders*, rather than the {{< note title="\"new\"" >}} Computer shaders were introduced in 2012. {{< /note >}} *compute shaders* included in OpenGL 4.3 and above. The goal of this project is achieving performant compute through the rendering pipeline, which compute shaders are not a part of[^1].
 
-Fragment shaders are the last shaders to be executed in the rendering pipeline[^2]. Each sample of the pixels covered by a primitive (in our case, this primitive is a quad which covers the entire window) generates a "fragment", meaning our shader will be invoked for every pixel in our pixel buffer.
+Fragment shaders are the last shaders to be executed in the rendering pipeline[^2]. Each sample of the pixels covered by a primitive (in our case, this primitive is a quad which covers the entire window) generates a "fragment", meaning our shader will be invoked for every pixel in our pixel buffer. This quad will cover the entire window space, allowing our fragment shader to generate fragments for every pixel.
 
-{{< figure
-  src="/images/screenquad.png"
-  title="Primitive quad"
-  label="quad"
-  caption="This quad will cover the entire window space, allowing our fragment shader to generate fragments for every pixel."
->}}
+{{< columns >}}
+
+```llvm
+(-1,1)                 (1,1)
+   x────────────────────x   
+   │\____               │   
+   │     \____          │   
+   │          \___      │   
+   │              \____ │   
+   │                   \│   
+   x────────────────────x   
+(-1,-1)               (1,-1)
+                            
+     primitive vertices     
+```
+
+<--->
+
+```llvm
+3────────────────────0
+│\____               │
+│     \____       1  │
+│          \___      │
+│  2           \____ │
+│                   \│
+2────────────────────1
+                      
+                      
+  primitive indices   
+```
+
+{{< /columns >}}
 
 Generating this primitive is relatively trivial, as it only requires setting up the VBO, VAO, and EBO using the following data:
 
@@ -86,12 +113,27 @@ static void get_texture_dimensions(size_t size,
 
 Using this function, we can set the dimensions of our textures according to the size of their respective buffers, saving VRAM.
 
-{{< figure
-  src="/images/truedims.png"
-  title="Calculating texture dimensions"
-  label="texture_dims"
-  caption="`N` refers to the number of floats within our buffer. We add padding so our textures are shaped rectangular. For this image to be completely accurate, multiply the `N`s by 4. $$width = \begin{cases} N, & \text{if } N \leq w_{max} \\ w_{max}, & \text{otherwise} \end{cases}$$ $$height = \begin{cases} 1, & \text{if } N \leq w_{max} \\ \lceil \frac{N}{w_{max}} \rceil, & \text{otherwise} \end{cases}$$ $$padded = \begin{cases} 1, & \text{if } \lfloor \frac{\text{size}}{16} \rceil \neq \frac{\text{size}}{16} \\ 0, & \text{otherwise} \end{cases}$$"
->}}
+{{< columns >}}
+
+```
+┌───┬───┬───┬───┐   ┌───┬───┬───┬───┐
+│ D │ D │   │   │   │ D │ D │ D │ D │
+├───┼───┼───┼───┤   ├───┼───┼───┼───┤
+│   │   │   │   │   │ D │ D │ P │ P │
+├───┼───┼───┼───┤   ├───┼───┼───┼───┤
+│   │   │   │   │   │   │   │   │   │
+├───┼───┼───┼───┤   ├───┼───┼───┼───┤
+│   │   │   │   │   │   │   │   │   │
+└───┴───┴───┴───┘   └───┴───┴───┴───┘
+       N=2                 N=6       
+       2x1                 4x2       
+```
+
+<--->
+
+`D` is for data, `P` is for padding. `N` refers to the number of floats within our buffer. We add padding so our textures are rectangular shaped. $$width = \begin{cases} N, & \text{if } N \leq w_{max} \\ w_{max}, & \text{otherwise} \end{cases}$$ $$height = \begin{cases} 1, & \text{if } N \leq w_{max} \\ \lceil \frac{N}{w_{max}} \rceil, & \text{otherwise} \end{cases}$$ $$padded = \begin{cases} 1, & \text{if } \lfloor \frac{\text{size}}{16} \rceil \neq \frac{\text{size}}{16} \\ 0, & \text{otherwise} \end{cases}$$
+
+{{< /columns >}}
 
 ### copying memory
 
@@ -135,12 +177,27 @@ Where the parameters are defined as:
 
 Most of the parameters are self-explanatory as they are a part of the equation provided above. However, two of them stick out: `incx` and `incy`. These two variables change how data in the `x` and `y` vectors are accessed: 
 
-{{< figure
-  src="/images/saxpy2.png"
-  title="`saxpy` with varying inc"
-  label="saxpy"
-  caption="The `inc_` parameters allow for strided data to be accessed accordingly within the same buffer."
->}}
+```
+                                        Y if incx=1,incy=1                   
+                                       ┌────────────────────────────────────┐
+                                       │(1α+2), (2α+3), (3α+4), (4α+5), ... │
+                                       └────────────────────────────────────┘
+                                                                             
+ X                                      Y if incx=2,incy=1                   
+┌───────────────────────────────────┐  ┌────────────────────────────────────┐
+│1, 2, 3, 4, 5, 6, 7, 8, 9, 10, ... │  │(1α+2), (3α+3), (5α+4), (7α+5), ... │
+└───────────────────────────────────┘  └────────────────────────────────────┘
+                                                                             
+ Y                                      Y if incx=1,incy=2                   
+┌───────────────────────────────────┐  ┌────────────────────────────────────┐
+│2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ... │  │(1α+2), 3, (2α+4), 5, (3α+6), ...   │
+└───────────────────────────────────┘  └────────────────────────────────────┘
+                                                                             
+                                        Y if incx=2,incy=2                   
+                                       ┌────────────────────────────────────┐
+                                       │(1α+2), 3, (3α+4), 5, (5α+6), ...   │
+                                       └────────────────────────────────────┘
+```
 
 Given all this, our fragment shader will have to have access to the following variables:
 
@@ -287,18 +344,61 @@ With that, the multiplication portion of the dot product performs with about the
 
 #### step 2: summation kernel
 
-The summation operation is where we face our biggest slowdowns. To combat this, our shader employs a technique called reduction, in which per every shader call, we cut the size of our vector in half by adding the second half to the first half repeatedly until we are only left with a single element:
+{{< columns >}}
 
-{{< figure
-  src="/images/reduce.png"
-  title="`reduction` operation"
-  label="reduction"
-  caption="Instead of iterating through each element within a single fragment, we slowly reduce the \"size\" of the buffer by adding the first half blocks by the second half blocks, and cutting the buffer in half."
->}}
+```
+      ┌───────────────────┐                 
+      │   ┌───────────────┼───┐             
+      │   │   ┌───────────┼───┼───┐         
+      │   │   │   ┌───────┼───┼───┼───┐     
+   A┌─▼─┐┌┼──┐├───┤┌───┐┌─┴─┐┌┼──┐├───┤┌───┐
+  B┌───┐┌─▼─┐┌┼──┐├───┐┌───┐┌─┴─┐┌┼──┐├───┐│
+ G┌───┐┌───┐┌─▼─┐┌┼──┐┌───┐┌───┐┌─┴─┐┌┼──┐│┘
+R┌───┐┌───┐┌───┐┌─▼─┐┌───┐┌───┐┌───┐┌─┴─┐│┘ 
+ │ 0 ││ 1 ││ 2 ││ 3 ││ 4 ││ 5 ││ 6 ││ 7 │┘  
+ └───┘└───┘└───┘└───┘└───┘└───┘└───┘└───┘   
+  N=32                                      
+                                            
+   A┌───┐┌───┐┌───┐┌───┐                    
+  B┌───┐┌───┐┌───┐┌───┐│                    
+ G┌───┐┌───┐┌───┐┌───┐│┘                    
+R┌───┐┌───┐┌───┐┌───┐│┘                     
+ │ 0 ││ 1 ││ 2 ││ 3 │┘                      
+ └───┘└───┘└───┘└───┘                       
+  N=16                                      
+                                            
+   A┌───┐┌───┐                              
+  B┌───┐┌───┐│                              
+ G┌───┐┌───┐│┘                              
+R┌───┐┌───┐│┘                               
+ │ 0 ││ 1 │┘                                
+ └───┘└───┘                                 
+  N=8                                       
+                                            
+   A┌───┐                                   
+  B┌───┐│                                   
+ G┌───┐│┘                                   
+R┌───┐│┘                                    
+ │ 0 │┘                                     
+ └───┘                                      
+  N=4                                       
+                                            
+   A┌───┐                                   
+  B┌───┐├──┐                                
+ G┌───┐│◄─┬┘                                
+R┌───┐│◄─┬┘                                 
+ │ 0 │◄──┘                                  
+ └───┘                                      
+  N=1                                       
+```
+
+<--->
+
+The summation operation is where we face our biggest slowdowns. To combat this, our shader employs a technique called reduction, in which per every shader call, we cut the size of our vector in half by adding the second half to the first half repeatedly until we are only left with a single element. Instead of iterating through each element within a single fragment, we slowly reduce the \"size\" of the buffer by adding the first half blocks by the second half blocks, and cutting the buffer in half.
 
 The exact process of reduction within the shader itself is as follows:
 1. Start with vector `z`, size `N`
-2. Divide `N` by two. The shader will go through the first half of fragments, adding the value contained in the fragment whose position is {{< note title="`N/2`" >}} Same value of `N/2` as before, not `N/4`. {{< /note >}} away from the current fragment. For the fragments in the second half, do nothing.
+2. Divide `N` by two. The shader will go through the first half of fragments, adding the value contained in the fragment whose position is $N_{prev}/2$ away from the current fragment. For the fragments in the second half, do nothing.
 3. Repeat step 2 until `N=4`
 4. At `N=4`, add up all the values contained in the fragment whose index is `0` into the red channel.
 
@@ -312,6 +412,8 @@ for (int i = N; i != 1; i /= 2)
 ```
 
 This means that our reduction summation shader will be called multiple times until we reach the final element.
+
+{{< /columns >}}
 
 #### improvement
 
@@ -354,12 +456,37 @@ As such, writing a single shader to handle all these operations would be signifi
 
 The general matrix multiply operation can be visualized below, where matrices `A`, `B`, and `C` are in column major order:
 
-{{< figure
-  src="/images/gemm1.png"
-  title="Matrix multiplication"
-  label="matmul"
-  caption="The diagram visualizes how data from matrices `A` and `B` determine the result of elements in `C`."
->}}
+```
+                                    N                
+                     ◄─────────────────────────────► 
+                    ┌───┬───┬───┬───┬───┬───┬───┬───┐
+                   ▲│   │   │   │   │ x │   │   │   │
+                   │├───┼───┼───┼───┼───┼───┼───┼───┤
+                   ││   │   │   │   │ y │   │   │   │
+                  K│├───┼───┼───┼───┼───┼───┼───┼───┤
+                   ││   │   │   │   │ z │   │   │   │
+                   │├───┼───┼───┼───┼───┼───┼───┼───┤
+          K        ▼│   │   │   │   │ w │   │   │ B │
+   ◄─────────────►  └───┴───┴───┴───┴───┴───┴───┴───┘
+  ┌───┬───┬───┬───┐ ┌───┬───┬───┬───┬───┬───┬───┬───┐
+ ▲│   │   │   │   │ │   │   │   │   │   │   │   │   │
+ │├───┼───┼───┼───┤ ├───┼───┼───┼───┼───┼───┼───┼───┤
+ ││   │   │   │   │ │   │   │   │   │   │   │   │   │
+ │├───┼───┼───┼───┤ ├───┼───┼───┼───┼───┼───┼───┼───┤
+ ││   │   │   │   │ │   │   │   │   │   │   │   │   │
+ │├───┼───┼───┼───┤ ├───┼───┼───┼───┼───┼───┼───┼───┤
+ ││ a │ b │ c │ d │ │   │   │   │   │ X │   │   │   │
+M│├───┼───┼───┼───┤ ├───┼───┼───┼───┼───┼───┼───┼───┤
+ ││   │   │   │   │ │   │   │   │   │   │   │   │   │
+ │├───┼───┼───┼───┤ ├───┼───┼───┼───┼───┼───┼───┼───┤
+ ││   │   │   │   │ │   │   │   │   │   │   │   │   │
+ │├───┼───┼───┼───┤ ├───┼───┼───┼───┼───┼───┼───┼───┤
+ ││   │   │   │   │ │   │   │   │   │   │   │   │   │
+ │├───┼───┼───┼───┤ ├───┼───┼───┼───┼───┼───┼───┼───┤
+ ▼│   │   │   │ A │ │   │   │   │   │   │   │   │ C │
+  └───┴───┴───┴───┘ └───┴───┴───┴───┴───┴───┴───┴───┘
+                          X = ax + by + cz + dw      
+```
 
 Like previous shaders, we calculate the current index, only sample the `C` texture if $ \beta \neq 0 $, and check if the current index plus the current element offset is less than the maximum index. Within the shader, before going into the actual kernels, we first determine the dimensions of our matrices:
 
@@ -399,23 +526,48 @@ vy.elem = (alpha * val) + (vy.elem * beta);
 
 At a glance, it may appear there is little room for optimization, given that I've stated earlier that methods like reduction for large matrices don't work out well with regard to speed due to the extensive draw calls. However, we can employ a different technique for significant speedups, particularly with matrices whose shapes are multiples of `4x4`.
 
-The drawback to our current implementation is that we sample matrices `A` and `B` about `m*n*k` times. This is primarily due to how the matrices are ordered vs how they are in memory:
+{{< columns >}}
 
-{{< figure
-  src="/images/memaccess1.png"
-  title="Ordering vs memory access"
-  label="memoryaccess1"
-  caption="This is how our current implementation accesses the matrices, assuming `A` and `B` are not transposed."
->}}
+```
+     matrix  A              matrix  B     
+┌───┬───┬────┬────┐    ┌───┬───┬────┬────┐
+│ 1 │ 5 │ 9  │ 13 │    │ 1 │ 5 │ 9  │ 13 │
+├───┼───┼────┼────┤    ├───┼───┼────┼────┤
+│ 2 │ 6 │ 10 │ 14 │    │ 2 │ 6 │ 10 │ 14 │
+├───┼───┼────┼────┤    ├───┼───┼────┼────┤
+│ 3 │ 7 │ 11 │ 15 │    │ 3 │ 7 │ 11 │ 15 │
+├───┼───┼────┼────┤    ├───┼───┼────┼────┤
+│ 4 │ 8 │ 12 │ 16 │    │ 4 │ 8 │ 12 │ 16 │
+└───┴───┴────┴────┘    └───┴───┴────┴────┘
+                                          
+                                       A  
+ ┌─┬─┬─┬─┬─┬─┬─┬─┬─┬──┬──┬──┬──┬──┬──┬──┐ 
+ │1│2│3│4│5│6│7│8│9│10│11│12│13│14│15│16│ 
+ └┬┴─┴─┴─┴┬┴─┴─┴─┴┬┴──┴──┴──┴┬─┴──┴──┴──┘ 
+  │ ┌─────┘       │          │            
+  │ │ ┌───────────┘          │            
+  │ │ │ ┌────────────────────┘         B  
+ ┌▼┬▼┬▼┬▼┬─┬─┬─┬─┬─┬──┬──┬──┬──┬──┬──┬──┐ 
+ │1│2│3│4│5│6│7│8│9│10│11│12│13│14│15│16│ 
+ └─┴─┴─┴─┴─┴─┴─┴─┴─┴──┴──┴──┴──┴──┴──┴──┘ 
+```
 
-Due to the memory layout of the matrices, `A` must be sampled `4` times, as opposed to `B` whose memory layout matches the ordering, allowing us to only sample it once. The solution is to reorder matrix `A`, such that we can continuously access it the same way we can continuously access matrix `B`:
+<--->
 
-{{< figure
-  src="/images/memaccess2.png"
-  title="Reordered matrix"
-  label="memoryaccess2"
-  caption="This is how we can reorder/transpose `A`, allowing us to continuously access it in memory, still assuming `A` and `B` are not specified to be transposed."
->}}
+The drawback to our current implementation is that we sample matrices `A` and `B` about `m*n*k` times. This is primarily due to how the matrices are ordered vs how they are in memory. Due to the memory layout of the matrices, `A` must be sampled `4` times, as opposed to `B` whose memory layout matches the ordering, allowing us to only sample it once. The solution is to reorder matrix `A`, such that we can continuously access it the same way we can continuously access matrix `B`:
+
+```
+                                      A 
+┌─┬─┬─┬──┬─┬─┬──┬──┬─┬─┬──┬──┬─┬─┬──┬──┐
+│1│5│9│13│2│6│10│14│3│7│11│15│4│8│12│16│
+└┬┴┬┴┬┴┬─┴─┴─┴──┴──┴─┴─┴──┴──┴─┴─┴──┴──┘
+ │ │ │ │                              B 
+┌▼┬▼┬▼┬▼┬─┬─┬─┬─┬─┬──┬──┬──┬──┬──┬──┬──┐
+│1│2│3│4│5│6│7│8│9│10│11│12│13│14│15│16│
+└─┴─┴─┴─┴─┴─┴─┴─┴─┴──┴──┴──┴──┴──┴──┴──┘
+```
+
+{{< /columns >}}
 
 This reordering/transposition allows us to cut down on texture sampling by a factor of `4`, meaning our kernel will now only sample `A` and `B` about `M*N*(K/4)` times, significantly cutting down on time spent on the summation.
 

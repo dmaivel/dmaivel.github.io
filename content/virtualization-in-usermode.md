@@ -2,20 +2,19 @@
 title: "virtualization in usermode"
 subtitle: "can kernels run in userland?"
 date: 2023-06-17
+tags: ["assembly", "x86-internals"]
 ---
 
-Is it possible to execute a kernel completely in usermode? Well, the short answer seems to be no, as a few issues become immediately apparent.
-- How will we execute privileged instructions?
-- How will memory be addressed?
+Is it possible to execute a kernel completely in usermode? Well, the short answer seems to be no, as a few issues become immediately apparent. How will we execute privileged instructions? How will memory be addressed?
 
-However, with a few hacks and tricks, its becomes apparent that there is some possibility. Note that this article assumes the host machine is running Linux on an x86-64 platform, although these concepts still apply to 32-bit programs running on x86-64 systems aswell.
+With a few hacks and tricks, its becomes apparent that there is some possibility. Note that this article assumes the host machine is running Linux on an x86-64 platform, although these concepts still apply to 32-bit programs running on x86-64 systems aswell.
 
-Typically, a host will have a piece of software known as a hypervisor, which runs in kernel mode (arguably a ring below) that allows for virtualization, creating executive environments seperate from your operating system, allowing the user to run other operating systems atop of their own. The question is, **can we emulate the behavior of a hypervisor in usermode?**
+Typically, a host will have a piece of software known as a hypervisor, which runs in kernel mode (arguably a ring below) that allows for virtualization, creating executive environments seperate from your operating system, allowing the user to run other operating systems atop of their own. The question is, *can we emulate the behavior of a hypervisor in usermode?*
 
 ## code execution structure
 
 Of the current issues present, code execution may be the easiest to address. Most instructions a binary will execute in its lifetime can already be executed without issue in userland. Consider the following example:
-```asm
+```nasm
 ; v0 = 0
 ; while (v0 < 10)
 ;    v0++
@@ -37,7 +36,7 @@ function:
 This snippet (a simple while loop) will execute the same, regardless of whether its executed in user or kernel mode. This gives us an advantage as we won't need to emulate every instruction in the x86-64 instruction set, giving us a slight performance advantage.
 
 Now, consider this example:
-```asm
+```nasm
 ; return __readcr0()
 function:
   push rbp
@@ -50,21 +49,53 @@ This function will execute just fine in kernel mode, however will trigger the `G
 
 Before we can get into instruction emulation, we have to figure out how exactly we should go about executing our code. One may be quick to think that we can do all the setup and execution in one single process, with a lifetime that looks something like this:
 
-{{< figure
-  src="/images/first_vm_proposal.png"
-  title="First proposed architecture"
-  label="first-proposal"
-  caption="All that this program would do is simply execute upon setup, handling faults as it goes."
->}}
+```
+   ┌───────────┐        
+   │ ./user-vm │        
+   └─────┬─────┘        
+         ▼              
+     ┌───────┐          
+     │ fault │◄────────┐
+     └───┬───┘         │
+         ▼             │
+┌───────────────────┐  │
+│ rip += ins.length │  │
+└────────┬──────────┘  │
+         │             │
+         └─────────────┘
+
+All that this program would do 
+is simply execute upon setup, 
+handling faults as it goes.
+```
 
 However, this single process architecture becomes limitting quickly. For one, control flows only in one direction, meaning our program practically stuck in an isolated loop (unless a hacky restore point is used). Second, we risk exposing our own memory to the execution, which risks corrupting major components in our program, the most significant of which is the signal handler. Luckily, a more elegant solution exists: `fork`.
 
-{{< figure
-  src="/images/second_vm_proposal.png"
-  title="Second proposed architecture"
-  label="second-proposal"
-  caption="This program branches off into two processes, essentially a debugger and a debugee. One program handles faults (instructions and what not), while the other program is what causes these faults."
->}}
+```
+     ┌───────────┐     ┌───────────┐ 
+     │ ./user-vm │     │ ./user-vm │ 
+     └─────┬─────┘     └─────┬─────┘ 
+           ▼                 ▼       
+       ┌──────┐          ┌───────┐   
+       │ fork │          │ fault │◄─┐
+       └───┬──┘          └───┬───┘  │
+           ▼                 │      │
+    ┌──────────────┐         │      │
+┌──►│ wait, ptrace │◄────────┘      │
+│   └──────┬───────┘                │
+│          ▼                        │
+│ ┌───────────────────┐             │
+│ │ rip += ins.length │             │
+│ └────────┬──────────┘             │
+│          │                        │
+└──────────┴────────────────────────┘
+
+This program branches off into two processes, 
+essentially a debugger and a debugee. One 
+program handles faults (instructions and 
+what not), while the other program is 
+what causes these faults.
+```
 
 By utilizing {{< note title="fork and ptrace" >}} note that neither of these solutions will necessarily grant you the abilty to elegantly switch between 32-bit and 64-bit; so, instead of modfying the segment registers, you could use `posix_spawn` to launch architecture specific vms {{< /note >}}, we bring down the risk of corruption significantly as we are able to spawn a clone of our current process, effectively splitting into two. Our forks only task is to signal **PTRACE_TRACEME** and **SIGSTOP**, allowing the parent to attach to the child process and begin initialization.
 
