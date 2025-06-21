@@ -26,16 +26,12 @@
   <div class="landscape-check" style="color: #e64553; border: 1px solid #e64553; padding: 4px; margin-bottom: 12px;">
     viewing in landscape mode is advised
   </div>
-  <div style="display: flex; justify-content: space-between;">
-    <div>
-    {{ partial "post-tags.html" . }}
-    </div>
-    <div style="text-align: right;">
-      {{ .WordCount }} words • {{ .ReadingTime }} mins
-    </div>
+  <h1 style="margin-bottom: 0; margin-top: -8px;">{{ .Title }}</h1>
+  <div style="font-family: Roboto, sans-serif; color: #bbb;">
+    {{ .Date.Format "Jan 02, 2006" }} • {{ .WordCount }} words • {{ .ReadingTime }} mins • {{ if .Params.tags }}
+      #{{ delimit .Params.tags ", #" }}
+    {{ end }}
   </div>
-  <h1 style="margin-bottom: 0; margin-top: 12px;">{{ .Title }}</h1>
-  <div style="font-family: Roboto, sans-serif; color: #bbb;">{{ .Date.Format "Jan 02, 2006" }}</div>
   <!--{{ .TableOfContents }}-->
   {{ .Content }}
 {{ end }}
