@@ -5,12 +5,22 @@
 }
 
 ul {
-  list-style:lower-greek;
+  list-style: none;
   padding-left: 28px;
+  counter-reset: greek-counter;
 }
-ul li::marker {
+
+ul li {
+  counter-increment: greek-counter;
+  position: relative;
+}
+
+ul li::before {
+  content: counter(greek-counter, lower-greek);
   color: #555;
   font-size: 20px;
+  position: absolute;
+  left: -20px;
 }
 </style>
 <ul>

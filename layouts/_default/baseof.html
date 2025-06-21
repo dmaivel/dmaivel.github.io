@@ -135,7 +135,7 @@ html {
   }
 
   .note {
-    display: inline-block;
+    /* display: inline-block; */
     position: relative;
     color: #9e9eff;
     /*color: ;*/
@@ -285,6 +285,91 @@ html {
 .post-tag[data-category="research"] { background: #9b59b6; }
 .post-tag[data-category="tutorial"] { background: #f39c12; }
 .post-tag[data-category="blog"] { background: #95a5a6; }
+
+.content {
+  counter-reset: h2-greek h3-greek;
+}
+
+.content h2 {
+  counter-increment: h2-greek;
+  counter-reset: h3-greek;
+  position: relative;
+}
+
+.content h2::before {
+  content: counter(h2-greek, lower-greek) "";
+  color: #555;
+  position: absolute;
+  left: -1.3em;
+}
+
+.content h3 {
+  counter-increment: h3-greek;
+  position: relative;
+}
+
+.content h3::before {
+  content: counter(h2-greek, lower-greek) "." counter(h3-greek, lower-greek) "";
+  color: #555;
+  position: absolute;
+  left: -2.3em;
+}
+
+span.sidenote {
+    display: none;
+
+    @media (min-width: 1060px) {
+        display: block;
+        position: relative;
+        float: right;
+        clear: right;
+        transform: translateY(-15%);
+
+        width: 32%;
+        margin: 0;
+        margin-bottom: 1.1rem;
+        margin-top: 1.1rem;
+        margin-right: -35%;
+        padding: 0.5rem;
+        padding-top: 0;
+        padding-bottom: 0;
+        box-sizing: border-box;
+        text-align: left;
+        background-color: initial;
+
+        font-size: 90%;
+        line-height: 150%;
+        color: #777;
+
+        border: none;
+        border-left-color: #444;
+        border-left-style: solid;
+        border-left-width: 1px;
+    }
+}
+
+span.sidenote small {
+    font-size: 100%;
+}
+
+.sidenote-version {
+  display: none;
+}
+
+.responsive-note .popup-note {
+  display: inline;
+}
+
+@media (min-width: 1060px) {
+  .sidenote-version {
+    display: inline;
+  }
+  
+  .responsive-note .popup-note {
+    display: none;
+  }
+}
+
 </style>
 <script>
   (function() {

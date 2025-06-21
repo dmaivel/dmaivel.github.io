@@ -23,7 +23,7 @@
       }
     }
   </style>
-  <div class="landscape-check" style="color: #e64553; border: 1px solid #e64553; padding: 4px; margin-bottom: 12px;">
+  <div class="landscape-check" style="color: #ff5e6c; border: 1px solid #ff5e6c; padding: 4px; margin-bottom: 12px;">
     viewing in landscape mode is advised
   </div>
   <h1 style="margin-bottom: 0; margin-top: -8px;">{{ .Title }}</h1>
@@ -33,5 +33,7 @@
     {{ end }}
   </div>
   <!--{{ .TableOfContents }}-->
-  {{ .Content }}
+  <div class="content">
+    {{ .Content }}
+  </div>
 {{ end }}

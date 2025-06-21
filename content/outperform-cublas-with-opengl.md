@@ -11,7 +11,7 @@ In this article, we explore the bare-bones of a compute library, the implementat
 
 ## design
 
-Our library will make use of *fragment shaders*, rather than the {{< note title="\"new\"" >}} Computer shaders were introduced in 2012. {{< /note >}} *compute shaders* included in OpenGL 4.3 and above. The goal of this project is achieving performant compute through the rendering pipeline, which compute shaders are not a part of[^1].
+Our library will make use of *fragment shaders*, rather than the {{< note title="\"new\"" >}} Compute shaders were introduced in 2012. {{< /note >}} *compute shaders* included in OpenGL 4.3 and above. The goal of this project is achieving performant compute through the rendering pipeline, which compute shaders are not a part of[^1].
 
 Fragment shaders are the last shaders to be executed in the rendering pipeline[^2]. Each sample of the pixels covered by a primitive (in our case, this primitive is a quad which covers the entire window) generates a "fragment", meaning our shader will be invoked for every pixel in our pixel buffer. This quad will cover the entire window space, allowing our fragment shader to generate fragments for every pixel.
 
@@ -583,7 +583,9 @@ In the end, we see some significant performance gains over the non-optimized sha
 | 512x512 | 1 MiB | 0.087s | 0.067s | +22.99% |
 | 1024x1024 | 4 MiB | 0.261s | 0.115s | +55.94% |
 | 2048x2048 | 16 MiB | 1.589s | 0.375s | +76.40% |
-| 4096x4096 | 64 MiB | {{< note title="~12s" >}} attempting to run the V1 kernel on matrices sized `4096x4096` caused graphical issues and would stall out on `__sched_yield` upon framebuffer/texture deletion, requiring user intervention to close the program. {{< /note >}} | 2.437s | +79.69% |
+| 4096x4096 | 64 MiB | ~12s* | 2.437s | +79.69% |
+
+`*` attempting to run the V1 kernel on matrices sized `4096x4096` caused graphical issues and would stall out on `__sched_yield` upon framebuffer/texture deletion, requiring user intervention to close the program.
 
 ---
 
@@ -591,7 +593,7 @@ In the end, we see some significant performance gains over the non-optimized sha
 
 The {{< note title="results" >}} Tests were performed on Linux (using DE) using a `GeForce GTX 1050` (`545.29.06`, CUDA Version: `12.3`) {{< /note >}} below are a measure of each of the respective program's entire runtime. This is done to not only benchmark the kernels themselves, but the speed of memory transfer (`cudaMemcpy` vs `glblasMemcpy`) aswell.
 
-| Demo | N | Vector/Matrix size | cuBLAS | glBLAS | Improvement |
+| Demo | N | Size | cuBLAS | glBLAS | Improvement |
 | ------ | ------ | ------ | ------ | ------ | ------ |
 | saxpy | 1024 | 4 KiB | 0.138s | **0.083s** | +39.86% |
 | saxpy | 1048576 | 4 MiB | 0.150s | **0.100s** | +33.33% |
