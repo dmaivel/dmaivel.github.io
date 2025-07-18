@@ -6,6 +6,7 @@
 <link rel="preload" href="/fonts/CascadiaMono-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/RobotoSlab-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ "css/vs-dark.css" | relURL }}">
+{{ partial "opengraph.html" . }}
 <style>
 html {
   -webkit-text-size-adjust: 100%; /* iOS and Safari */
@@ -66,11 +67,13 @@ html {
   }
 
   pre {
-    border: dashed 1px #444;
+    border: solid 1px #444;
   }
 
   hr {
-    border: dashed 1px #444;
+    border: none; 
+    height: 1px; 
+    background-color: #444;
   }
 
   h1 {

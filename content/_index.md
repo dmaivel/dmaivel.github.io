@@ -7,7 +7,7 @@ title: "Home page"
 
 ## projects
 
-<style>body { max-width: 650px; } li { margin-bottom: 16px; } </style>
+<style> li { margin-bottom: 16px; } </style>
 
 * <div class="line">
         <span style="font-size: 20px; font-family: Roboto; font-weight: bold"><a href="https://github.com/dmaivel/sharedgl">SharedGL</a></span>

@@ -2,7 +2,7 @@
 
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: 100%; overflow: auto; display: block; }
-/* LineHighlight */ .chroma .hl { background-color: #333333; display: block; width: 100% }
+/* LineHighlight */ .chroma .hl { /*background-color: #333333;*/ opacity: 0.5; display: block; width: 100% }
 /* LineNumbersTable */ .chroma .lnt { color: #858585; margin-right: 0.4em; padding: 0 0.4em 0 0.4em; display: block; }
 /* LineNumbers */ .chroma .ln { color: #858585; margin-right: 0.4em; padding: 0 0.4em 0 0.4em; }
 

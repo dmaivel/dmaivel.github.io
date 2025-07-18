@@ -22,6 +22,13 @@ ul li::before {
   position: absolute;
   left: -20px;
 }
+.blog-summary {
+  position: relative;
+  max-height: 80px;
+  overflow: hidden;
+  mask: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+  -webkit-mask: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+}
 </style>
 <ul>
   {{ range .Site.RegularPages.ByDate.Reverse }}
@@ -34,7 +41,11 @@ ul li::before {
           {{ end }}
         </span>
       </div>
-      <span style="color: #bbb; font-family: Roboto">{{ .Date.Format "2 Jan 2006" }}</span>
+      <span style="color: #bbb; font-family: Roboto">{{ .Date.Format "Jan 2, 2006" }} • {{ .WordCount }} words • {{ .ReadingTime }} mins</span>
+      <br>
+      <div class="blog-summary">
+        {{ .Content | strings.Truncate 360 }}
+      </div>
     </li>
   {{ end }}
 </ul>
