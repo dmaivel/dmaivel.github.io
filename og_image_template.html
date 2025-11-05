@@ -3,6 +3,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 <style>
+@font-face {
+  font-family: 'RobotoSlab';
+  src: url('./static/fonts/RobotoSlab-VariableFont_wght.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 body {
     padding-left: 24px;
     padding-top: 24px;
@@ -16,14 +24,14 @@ body {
 
 h1 {
     font-size: 150px;
-    font-family: "Roboto", sans-serif;
+    font-family: "RobotoSlab", sans-serif;
     text-decoration: underline solid #87a987;
     margin-bottom: 0px;
 }
 
 h4 {
     font-size: 32px;
-    font-family: "Jost";
+    font-family: "RobotoSlab";
     margin-bottom: 0px;
     margin-top: 0px;
     color: #888;
@@ -34,7 +42,7 @@ h4 {
 
 h3 {
     font-size: 32px;
-    font-family: "Jost";
+    font-family: "RobotoSlab";
     color: #888;
     font-weight: normal;
     float: left;
@@ -43,7 +51,7 @@ h3 {
 }
 
 p {
-    font-family: "Roboto";
+    font-family: "RobotoSlab";
     transform: skewY(-3deg);
     /* text-decoration: underline dotted #87a987; */
     font-size: 70px;
@@ -61,7 +69,7 @@ hr {
 }
 
 pre {
-    font-family: "Inter";
+    font-family: "RobotoSlab";
     font-size: 20px;
 }
 </style>
@@ -76,6 +84,7 @@ width: 90vw;">
 <hr>
 <p>title</p>
 <h4>date • tags</h4>
+<br>
 <hr>
 </div>
 

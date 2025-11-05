@@ -18,7 +18,7 @@ ul li {
 ul li::before {
   content: counter(greek-counter, lower-greek);
   color: #555;
-  font-size: 20px;
+  font-size: 24px;
   position: absolute;
   left: -20px;
 }
@@ -28,20 +28,23 @@ ul li::before {
   overflow: hidden;
   mask: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
   -webkit-mask: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+  color: #777;
 }
+
 </style>
 <ul>
   {{ range .Site.RegularPages.ByDate.Reverse }}
-    <li>
+  <!-- background-color: #191919; padding: 16px; border-radius: 2px; border: #303030 1px solid; -->
+    <li style="">
        <div class="line">
-        <span><a style="font-family: Roboto; font-size: 22px; font-weight: bold;" href="{{ .RelPermalink }}">{{ .Title }}</a></span>
+        <span><a style="font-family: RobotoSlab; font-size: 24px; font-weight: bold;" href="{{ .RelPermalink }}">{{ .Title }}</a></span>
         <span style="color: #888">
           {{ if .Params.tags }}
             #{{ delimit .Params.tags ", #" }}
           {{ end }}
         </span>
       </div>
-      <span style="color: #bbb; font-family: Roboto">{{ .Date.Format "Jan 2, 2006" }} • {{ .WordCount }} words • {{ .ReadingTime }} mins</span>
+      <span style="color: #bbb; font-family: RobotoSlab">{{ .Date.Format "Jan 2, 2006" }} • {{ .WordCount }} words • {{ .ReadingTime }} mins</span>
       <br>
       <div class="blog-summary">
         {{ .Content | strings.Truncate 360 }}

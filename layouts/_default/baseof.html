@@ -15,6 +15,7 @@ html {
   text-size-adjust: 100%; /* Standard property */
   color-scheme: dark;
 }
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -46,24 +47,43 @@ html {
 }
 
   body {
-    font-size: 16px;
+    font-size: 18px;
     padding: 0 10px;
     margin: 50px auto;
     margin-top: 20px;
     max-width: 800px;
     text-align: left;
     font-family: RobotoSlab, sans-serif;
-    background-color: #121212;
-    color: #e8e8e8
+    background-color: #161615;
+    color: #d4d4d4;
   }
 
   h1, h2, h3, h4, h5, h6, .post-date, .post-tag {
-    font-family: Roboto, sans-serif
+    font-family: RobotoSlab, sans-serif
+  }
+
+  a.footnote-ref {
+    text-decoration: none;
+    color: #d4d4d4;
+  }
+
+  sup {
+    background: #3a3a3a;
+    /* border: 1px solid #444; */
+    border-radius: 3px;
+    padding: 1px 4px;
+    font-size: 0.7em;
+    /* transition: background 0.1s; */
+  }
+
+  sup:hover {
+    background: #5a5a5a;
+    /* border-color: #555; */
   }
 
   code {
     font-family: CascadiaMono, monospace;
-    font-size: 15px;
+    font-size: 17px;
   }
 
   pre {
@@ -78,11 +98,58 @@ html {
 
   h1 {
     text-align: left;
-    font-size: 42px;
+    font-size: 52px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 16px;
   }
 
   a {
+    text-decoration-color: #87a987;
+    color: #d4d4d4;
+  }
+
+  a:hover:not(sup a) {
     color: #87a987;
+  }
+
+  code:not(pre code) {
+    background: #2a2a2a;
+    /* border: 1px solid #444; */
+    border-radius: 3px;
+    padding: 3px 5px;
+    font-size: 0.9em;
+  }
+
+  p, ul, ol {
+    line-height: 1.6;
+  }
+
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  h1 a:hover, h2 a:hover, h3 a:hover, 
+  h4 a:hover, h5 a:hover, h6 a:hover {
+    text-decoration: underline;
   }
 
   #suggestions {
@@ -188,10 +255,6 @@ html {
     display: block;
   }
 
-  code {
-    /*-webkit-text-size-adjust: 140%;*/
-  }
-
   .footnotes p {
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
@@ -225,68 +288,95 @@ html {
     outline: 2px solid #0077cc;
   }
 
-/* Base tag styles */
-.post-tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+  .alert {
+    padding: 16px;
+    margin: 16px 0;
+    border-left: 4px solid;
+    /* border-radius: 6px; */
+    display: flex;
+    gap: 12px;
 }
 
-.post-tags--inline {
-  display: inline-flex;
+.alert-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
 }
 
-.post-tags--block {
-  display: flex;
-  margin-bottom: 16px;
+.alert-content {
+    flex: 1;
 }
 
-.post-tag {
-  display: inline-block;
-  color: #e0e0e0;
-  /* border-radius: 4px; */
-  line-height: 1;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-  padding: 4px 12px;
-  font-size: 12px;
+.alert-title {
+    font-weight: 600;
+    margin-bottom: 4px;
 }
 
-.post-tag:hover {
-  opacity: 0.8;
+.alert-note {
+    background: rgba(31, 111, 235, 0.1);
+    border-left-color: #1f6feb;
 }
 
-/* Default colors */
-.post-tag--category {
-  background: #20b2aa;
+.alert-note .alert-icon {
+    color: #58a6ff;
 }
 
-.post-tag--tag {
-  background: #3498db;
+.alert-note .alert-title {
+    color: #58a6ff;
 }
 
-.post-tag[data-tag="security"] { background: #e74c3c; }
-.post-tag[data-tag="kernel"] { background: #9b59b6; }
-.post-tag[data-tag="reverse-engineering"] { background: #b28be1; }
-.post-tag[data-tag="windows"] { background: #74c7ec; }
-.post-tag[data-tag="x86-internals"] { background: #da7591; }
-.post-tag[data-tag="exploit"] { background: #c0392b; }
-.post-tag[data-tag="research"] { background: #66aba1; }
-.post-tag[data-tag="assembly"] { background: #d7875f; }
-.post-tag[data-tag="debugging"] { background: #27ae60; }
-.post-tag[data-tag="programming"] { background: #959fde; }
-.post-tag[data-tag="tutorial"] { background: #f1c40f; color: #eee; }
-.post-tag[data-tag="analysis"] { background: #95a5a6; }
+.alert-tip {
+    background: rgba(46, 160, 67, 0.1);
+    border-left-color: #2ea043;
+}
 
-.post-tag[data-category="windows-internals"] { background: #20b2aa; }
-.post-tag[data-category="security"] { background: #e74c3c; }
-.post-tag[data-category="development"] { background: #3498db; }
-.post-tag[data-category="research"] { background: #9b59b6; }
-.post-tag[data-category="tutorial"] { background: #f39c12; }
-.post-tag[data-category="blog"] { background: #95a5a6; }
+.alert-tip .alert-icon {
+    color: #3fb950;
+}
+
+.alert-tip .alert-title {
+    color: #3fb950;
+}
+
+.alert-important {
+    background: rgba(163, 113, 247, 0.1);
+    border-left-color: #a371f7;
+}
+
+.alert-important .alert-icon {
+    color: #b083ff;
+}
+
+.alert-important .alert-title {
+    color: #b083ff;
+}
+
+.alert-warning {
+    background: rgba(187, 128, 9, 0.1);
+    border-left-color: #bb8009;
+}
+
+.alert-warning .alert-icon {
+    color: #d29922;
+}
+
+.alert-warning .alert-title {
+    color: #d29922;
+}
+
+.alert-caution {
+    background: rgba(248, 81, 73, 0.1);
+    border-left-color: #f85149;
+}
+
+.alert-caution .alert-icon {
+    color: #ff7b72;
+}
+
+.alert-caution .alert-title {
+    color: #ff7b72;
+}
 
 .content {
   counter-reset: h2-greek h3-greek;
