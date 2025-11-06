@@ -2,10 +2,13 @@
 title: "Home page"
 ---
 
-## posts
+<h2 style="margin-top: -8px; transform: skewY(-2deg); transform-origin: top; text-decoration: underline #87a987; -webkit-text-decoration: underline #87a987;">posts</h2>
+
 {{< posts >}}
 
-## projects
+---
+
+<h2 style="margin-top: -8px; transform: skewY(-2deg); transform-origin: top; text-decoration: underline #87a987; -webkit-text-decoration: underline #87a987;">projects</h2>
 
 <style> li { margin-bottom: 16px; } </style>
 
@@ -44,6 +47,7 @@ title: "Home page"
         <span style="color: #888;">#cuda, #autodiff</span>
       </div><span style="font-family: RobotoSlab; color: #bbb;">automatic differentiation library written in C++ and CUDA from scratch</span>
 
+---
 
 ### contact
 
