@@ -2,13 +2,13 @@
 title: "Home page"
 ---
 
-<h2 style="margin-top: -8px; transform: skewY(-2deg); transform-origin: top; text-decoration: underline #87a987; -webkit-text-decoration: underline #87a987;">posts</h2>
+<h2 style="margin-top: -8px; transform: skewY(-2deg); transform-origin: top; text-decoration: none #87a987; -webkit-text-decoration: underline #87a987;">posts</h2>
 
 {{< posts >}}
 
 ---
 
-<h2 style="margin-top: -8px; transform: skewY(-2deg); transform-origin: top; text-decoration: underline #87a987; -webkit-text-decoration: underline #87a987;">projects</h2>
+<h2 style="margin-top: -8px; transform: skewY(-2deg); transform-origin: top; text-decoration: none #87a987; -webkit-text-decoration: underline #87a987;">projects</h2>
 
 <style> li { margin-bottom: 16px; } </style>
 
