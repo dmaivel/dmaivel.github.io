@@ -3,7 +3,7 @@ title: "about"
 layout: "page"
 ---
 
-<img src="https://avatars.githubusercontent.com/u/38770072?v=4" alt="About me" style="float: right; margin: 0 0 15px 15px; max-width: 96px; height: auto; border-radius: 100%;">
+<img src="https://avatars.githubusercontent.com/u/38770072?v=4" alt="About me" style="float: right; margin: 0 5px 15px 15px; width: 96px; height: 96px; border-radius: 50%;">
 
 #### about me
 
