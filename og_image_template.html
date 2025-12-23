@@ -1,15 +1,223 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
 <style>
-@font-face {
-  font-family: 'RobotoSlab';
-  src: url('./static/fonts/RobotoSlab-VariableFont_wght.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
+  /* google-sans-regular - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./static/fonts/google-sans-v67-latin-regular.woff2') format('woff2');
+  }
+  /* google-sans-italic - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Google Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url('./static/fonts/google-sans-v67-latin-italic.woff2') format('woff2');
+  }
+  /* google-sans-500 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./static/fonts/google-sans-v67-latin-500.woff2') format('woff2');
+  }
+  /* google-sans-500italic - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Google Sans';
+    font-style: italic;
+    font-weight: 500;
+    src: url('./static/fonts/google-sans-v67-latin-500italic.woff2') format('woff2');
+  }
+  /* google-sans-600 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./static/fonts/google-sans-v67-latin-600.woff2') format('woff2');
+  }
+  /* google-sans-600italic - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Google Sans';
+    font-style: italic;
+    font-weight: 600;
+    src: url('./static/fonts/google-sans-v67-latin-600italic.woff2') format('woff2');
+  }
+  /* google-sans-700 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./static/fonts/google-sans-v67-latin-700.woff2') format('woff2');
+  }
+  /* google-sans-700italic - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Google Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: url('./static/fonts/google-sans-v67-latin-700italic.woff2') format('woff2');
+  }
+
+  /* google-sans-flex-200 - latin_math_symbols */
+  @font-face {
+    font-display: swap;
+    font-family: 'Google Sans Flex';
+    font-style: normal;
+    font-weight: 200;
+    src: url('./static/fonts/google-sans-flex-v16-latin_math_symbols-200.woff2') format('woff2');
+  }
+  /* google-sans-flex-300 - latin_math_symbols */
+  @font-face {
+    font-display: swap;
+    font-family: 'Google Sans Flex';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./static/fonts/google-sans-flex-v16-latin_math_symbols-300.woff2') format('woff2');
+  }
+  /* google-sans-flex-regular - latin_math_symbols */
+  @font-face {
+    font-display: swap;
+    font-family: 'Google Sans Flex';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./static/fonts/google-sans-flex-v16-latin_math_symbols-regular.woff2') format('woff2');
+  }
+  /* google-sans-flex-500 - latin_math_symbols */
+  @font-face {
+    font-display: swap;
+    font-family: 'Google Sans Flex';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./static/fonts/google-sans-flex-v16-latin_math_symbols-500.woff2') format('woff2');
+  }
+  /* google-sans-flex-600 - latin_math_symbols */
+  @font-face {
+    font-display: swap;
+    font-family: 'Google Sans Flex';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./static/fonts/google-sans-flex-v16-latin_math_symbols-600.woff2') format('woff2');
+  }
+  /* google-sans-flex-700 - latin_math_symbols */
+  @font-face {
+    font-display: swap;
+    font-family: 'Google Sans Flex';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./static/fonts/google-sans-flex-v16-latin_math_symbols-700.woff2') format('woff2');
+  }
+  /* google-sans-flex-800 - latin_math_symbols */
+  @font-face {
+    font-display: swap;
+    font-family: 'Google Sans Flex';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./static/fonts/google-sans-flex-v16-latin_math_symbols-800.woff2') format('woff2');
+  }
+  /* google-sans-flex-900 - latin_math_symbols */
+  @font-face {
+    font-display: swap;
+    font-family: 'Google Sans Flex';
+    font-style: normal;
+    font-weight: 900;
+    src: url('./static/fonts/google-sans-flex-v16-latin_math_symbols-900.woff2') format('woff2');
+  }
+
+  /* roboto-slab-200 - greek_latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 200;
+    src: url('./static/fonts/roboto-slab-v36-greek_latin-200.woff2') format('woff2');
+  }
+  /* roboto-slab-300 - greek_latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./static/fonts/roboto-slab-v36-greek_latin-300.woff2') format('woff2');
+  }
+  /* roboto-slab-regular - greek_latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./static/fonts/roboto-slab-v36-greek_latin-regular.woff2') format('woff2');
+  }
+  /* roboto-slab-500 - greek_latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./static/fonts/roboto-slab-v36-greek_latin-500.woff2') format('woff2');
+  }
+  /* roboto-slab-600 - greek_latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./static/fonts/roboto-slab-v36-greek_latin-600.woff2') format('woff2');
+  }
+  /* roboto-slab-700 - greek_latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./static/fonts/roboto-slab-v36-greek_latin-700.woff2') format('woff2');
+  }
+  /* roboto-slab-800 - greek_latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./static/fonts/roboto-slab-v36-greek_latin-800.woff2') format('woff2');
+  }
+
+  /* jetbrains-mono-regular - greek_latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./static/fonts/jetbrains-mono-v24-greek_latin-regular.woff2') format('woff2');
+  }
+  /* jetbrains-mono-italic - greek_latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'JetBrains Mono';
+    font-style: italic;
+    font-weight: 400;
+    src: url('./static/fonts/jetbrains-mono-v24-greek_latin-italic.woff2') format('woff2');
+  }
+  /* jetbrains-mono-600 - greek_latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./static/fonts/jetbrains-mono-v24-greek_latin-600.woff2') format('woff2');
+  }
+  /* jetbrains-mono-600italic - greek_latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'JetBrains Mono';
+    font-style: italic;
+    font-weight: 600;
+    src: url('./static/fonts/jetbrains-mono-v24-greek_latin-600italic.woff2') format('woff2');
+  }
 
 body {
     padding-left: 24px;
@@ -24,25 +232,23 @@ body {
 
 h1 {
     font-size: 150px;
-    font-family: "RobotoSlab", sans-serif;
-    text-decoration: underline solid #87a987;
+    font-family: "Roboto Slab", sans-serif;
+    text-decoration: underline solid #a78bfa;
     margin-bottom: 0px;
 }
 
 h4 {
     font-size: 32px;
-    font-family: "RobotoSlab";
+    font-family: "Roboto Slab";
     margin-bottom: 0px;
     margin-top: 0px;
     color: #888;
-    transform: skewY(-3deg);
-    text-align: center;
     font-weight: normal;
 }
 
 h3 {
-    font-size: 32px;
-    font-family: "RobotoSlab";
+    font-size: 42px;
+    font-family: "Roboto Slab";
     color: #888;
     font-weight: normal;
     float: left;
@@ -51,12 +257,10 @@ h3 {
 }
 
 p {
-    font-family: "RobotoSlab";
-    transform: skewY(-3deg);
-    /* text-decoration: underline dotted #87a987; */
+    font-family: "Google Sans Flex";
+    text-decoration: underline solid #a78bfa;
     font-size: 70px;
     font-weight: bold;
-    text-align: center;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -64,33 +268,54 @@ p {
 hr { 
     border: none; 
     height: 0; 
-    border-top: 12px dotted #87a987; 
-    transform: skewY(-3deg);
+    border-top: 12px dotted #a78bfa; 
 }
 
 pre {
-    font-family: "RobotoSlab";
+    font-family: "Roboto Slab";
     font-size: 20px;
+}
+
+.bg-pattern {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    opacity: 0.9;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='%23333333' fill-opacity='1.0'/%3E%3C/svg%3E");
+
+    -webkit-mask-image: radial-gradient(circle at center, transparent 10%, black 100%);
+    mask-image: radial-gradient(circle at center, transparent 10%, black 100%);
+
+    pointer-events: none;
+}
+
+.post-tags { display: flex; gap: 0.5rem; }
+.tag {
+    font-family: JetBrains Mono;
+    font-size: 2rem;
+    color: #a78bfa;
+    background: rgba(167, 139, 250, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
 }
 </style>
 
 <body>
+  <div class="bg-pattern"></div>
 
-<div style="position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 90vw;">
-<hr>
-<p>title</p>
-<h4>date • tags</h4>
-<br>
-<hr>
+<div style="">
+<h4 style="color: #888; font-family: 'Roboto Slab'">{date} • {word_count} words • {read_time} mins</h4>
+<p>{title}</p>
+<div class="post-tags">
+{tags}
 </div>
 
-<h3>@ dmaivel.com</h4>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h3>@ dmaivel.com</h3>
 
-<pre style="right: 10px;  position: absolute; bottom: 10px; color: #888">
+<pre style="right: 10px;  position: absolute; bottom: 10px; color: #888; font-size: 32px;">
      ╱|、
     (˚ˎ 。7  
      |、˜\          

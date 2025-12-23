@@ -1,0 +1,41 @@
+{{ define "main" }}
+<title>{{ .Title }} - dmaivel</title>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>    
+  <br>
+  <style>
+    .landscape-check {
+      display: none;
+    }
+
+    @media screen and (orientation:portrait) {
+      .landscape-check {
+        display: block;
+      }
+    }
+  </style>
+  <div style="color: #888;">
+    {{ .Date.Format "Jan 2, 2006" }} • {{ .WordCount }} words • {{ .ReadingTime }} mins
+  </div>
+  <h1 style="margin-bottom: 0px; margin-top: 0px; text-decoration: underline solid #a78bfa; -webkit-text-decoration: underline solid #a78bfa;">{{ .Title }}</h1>
+  <div class="post-tags">
+    {{ range .Params.tags }}
+      <span class="tag">#{{ . }}</span>
+    {{ end }}
+  </div>
+  <br>
+  <!-- <hr> -->
+  <!--{{ .TableOfContents }}-->
+  <div class="content">
+    {{ .Content }}
+  </div>
+{{ end }}

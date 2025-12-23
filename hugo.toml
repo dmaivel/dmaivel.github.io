@@ -18,3 +18,5 @@ title = 'dmaivel'
   autoHeadingIDType = "github"
 [params]
   favicon = "./favicon.ico"
+[permalinks]
+  posts = "/:contentbasename/"

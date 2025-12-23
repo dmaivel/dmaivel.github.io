@@ -11,7 +11,7 @@
     };
   </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>    
-  <br>
+  <!-- <br> -->
   <style>
     .landscape-check {
       display: none;
@@ -22,15 +22,10 @@
         display: block;
       }
     }
+
+    li { margin-bottom: 8px; }
   </style>
-  <h1 style="margin-bottom: 0; margin-top: -8px; transform: skewY(-2deg) translate(-0.5rem); transform-origin: top; text-decoration: underline #87a987; -webkit-text-decoration: underline #87a987; text-align: center">{{ .Title }}</h1>
-  <div style="font-family: RobotoSlab, sans-serif; color: #aaa; transform: skewY(-2deg) translate(-0.5rem); transform-origin: top; text-align: center">
-    {{ .Date.Format "Jan 2, 2006" }} • {{ .WordCount }} words • {{ .ReadingTime }} mins • {{ if .Params.tags }}
-      #{{ delimit .Params.tags ", #" }}
-    {{ end }}
-  </div>
-  <br>
-  <hr>
+  <!-- <hr> -->
   <!--{{ .TableOfContents }}-->
   <div class="content">
     {{ .Content }}

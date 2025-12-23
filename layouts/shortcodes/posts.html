@@ -30,25 +30,25 @@ ul li::before {
   -webkit-mask: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
   color: #777;
 }
-
 </style>
-<ul>
-  {{ range .Site.RegularPages.ByDate.Reverse }}
+<!-- <ul> -->
+  {{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
   <!-- background-color: #191919; padding: 16px; border-radius: 2px; border: #303030 1px solid; -->
-    <li style="">
-       <div class="line">
-        <span><a style="font-family: RobotoSlab; font-size: 24px; font-weight: bold;" href="{{ .RelPermalink }}">{{ .Title }}</a></span>
-        <span style="color: #888">
-          {{ if .Params.tags }}
-            #{{ delimit .Params.tags ", #" }}
-          {{ end }}
-        </span>
+    <div style="margin-bottom: 48px;">
+       <span style="color: #888; font-family: 'Roboto Slab'">{{ .Date.Format "Jan 2, 2006" }} • {{ .WordCount }} words • {{ .ReadingTime }} mins</span>
+      <div class="line">
+        <span><a style="font-family: Google Sans Flex; font-size: 52px; font-weight: bold;" href="{{ .RelPermalink }}">{{ .Title }}</a></span>
       </div>
-      <span style="color: #bbb; font-family: RobotoSlab">{{ .Date.Format "Jan 2, 2006" }} • {{ .WordCount }} words • {{ .ReadingTime }} mins</span>
-      <br>
+      <div class="post-tags">
+          {{ range .Params.tags }}
+            <span class="tag">#{{ . }}</span>
+          {{ end }}
+      </div>
+      <!-- <br> -->
+       <br>
       <div class="blog-summary">
         {{ .Content | strings.Truncate 360 }}
       </div>
-    </li>
+    </div>
   {{ end }}
-</ul>
+<!-- </ul> -->

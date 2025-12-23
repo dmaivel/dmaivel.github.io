@@ -319,7 +319,7 @@ void main()
 This implementation, however, is extremely slow. Instead of making use of the possible thousands of fragments provided, we calculate the result in a single fragment call. Individual fragments aren't fast enough on their own, which is why they need to be paired with other fragments to make use of parallelism.
 
 As such, we can instead divide the dot product into two distinct operations:
-1. Multiply vectors `x` and` y`, store into vector `z`
+1. Multiply vectors `x` and `y`, store into vector `z`
 2. Perform summation on vector `z`
 
 By splitting the dot product into these two operations, we can maximize parallelism using a single shader call for the first step, and utilizing a technique called reduction for the second step.
