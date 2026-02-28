@@ -3,912 +3,912 @@
     .dot { fill: white; }
   </style>
   <g class="sphere">
-    <circle class="dot" cx="100.0" cy="0.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="4.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="4.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="4.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="4.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="4.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="4.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="4.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="4.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="4.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="8.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="12.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="12.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="12.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="12.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="12.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="12.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="12.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="12.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="12.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="12.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="12.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="12.0" r="1.5"/>
-    <circle class="dot" cx="132.0" cy="12.0" r="1.5"/>
-    <circle class="dot" cx="140.0" cy="12.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="132.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="144.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="152.0" cy="16.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="132.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="140.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="148.0" cy="20.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="144.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="152.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="160.0" cy="24.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="132.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="140.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="148.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="156.0" cy="28.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="132.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="144.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="152.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="160.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="168.0" cy="32.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="132.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="140.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="148.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="156.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="164.0" cy="36.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="140.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="144.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="152.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="160.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="168.0" cy="40.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="132.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="140.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="148.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="156.0" cy="44.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="132.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="144.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="152.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="160.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="168.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="176.0" cy="48.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="132.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="140.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="148.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="156.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="164.0" cy="52.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="144.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="152.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="160.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="168.0" cy="56.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="132.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="140.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="148.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="156.0" cy="60.0" r="1.5"/>
-    <circle class="dot" cx="8.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="132.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="144.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="152.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="160.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="168.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="176.0" cy="64.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="132.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="140.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="148.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="164.0" cy="68.0" r="1.5"/>
-    <circle class="dot" cx="8.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="144.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="152.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="160.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="168.0" cy="72.0" r="1.5"/>
-    <circle class="dot" cx="4.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="132.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="140.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="156.0" cy="76.0" r="1.5"/>
-    <circle class="dot" cx="4.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="8.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="144.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="152.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="160.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="168.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="176.0" cy="80.0" r="1.5"/>
-    <circle class="dot" cx="4.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="132.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="140.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="148.0" cy="84.0" r="1.5"/>
-    <circle class="dot" cx="8.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="144.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="152.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="160.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="168.0" cy="88.0" r="1.5"/>
-    <circle class="dot" cx="4.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="140.0" cy="92.0" r="1.5"/>
-    <circle class="dot" cx="4.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="8.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="144.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="152.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="160.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="168.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="176.0" cy="96.0" r="1.5"/>
-    <circle class="dot" cx="4.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="132.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="148.0" cy="100.0" r="1.5"/>
-    <circle class="dot" cx="8.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="144.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="152.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="168.0" cy="104.0" r="1.5"/>
-    <circle class="dot" cx="4.0" cy="108.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="108.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="108.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="108.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="108.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="108.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="108.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="108.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="108.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="108.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="108.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="108.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="108.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="108.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="108.0" r="1.5"/>
-    <circle class="dot" cx="124.0" cy="108.0" r="1.5"/>
-    <circle class="dot" cx="4.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="8.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="144.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="152.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="160.0" cy="112.0" r="1.5"/>
-    <circle class="dot" cx="4.0" cy="116.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="116.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="116.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="116.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="116.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="116.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="116.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="116.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="116.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="116.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="116.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="116.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="116.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="116.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="116.0" r="1.5"/>
-    <circle class="dot" cx="132.0" cy="116.0" r="1.5"/>
-    <circle class="dot" cx="8.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="152.0" cy="120.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="124.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="124.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="124.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="124.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="124.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="124.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="124.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="124.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="124.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="124.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="124.0" r="1.5"/>
-    <circle class="dot" cx="108.0" cy="124.0" r="1.5"/>
-    <circle class="dot" cx="8.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="144.0" cy="128.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="132.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="132.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="132.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="132.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="132.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="132.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="132.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="132.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="132.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="132.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="132.0" r="1.5"/>
-    <circle class="dot" cx="100.0" cy="132.0" r="1.5"/>
-    <circle class="dot" cx="116.0" cy="132.0" r="1.5"/>
-    <circle class="dot" cx="8.0" cy="136.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="136.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="136.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="136.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="136.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="136.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="136.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="136.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="136.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="136.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="136.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="136.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="136.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="136.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="136.0" r="1.5"/>
-    <circle class="dot" cx="136.0" cy="136.0" r="1.5"/>
-    <circle class="dot" cx="12.0" cy="140.0" r="1.5"/>
-    <circle class="dot" cx="28.0" cy="140.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="140.0" r="1.5"/>
-    <circle class="dot" cx="44.0" cy="140.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="140.0" r="1.5"/>
-    <circle class="dot" cx="60.0" cy="140.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="140.0" r="1.5"/>
-    <circle class="dot" cx="76.0" cy="140.0" r="1.5"/>
-    <circle class="dot" cx="92.0" cy="140.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="144.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="144.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="144.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="144.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="144.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="144.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="144.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="144.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="144.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="144.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="144.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="144.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="144.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="144.0" r="1.5"/>
-    <circle class="dot" cx="128.0" cy="144.0" r="1.5"/>
-    <circle class="dot" cx="20.0" cy="148.0" r="1.5"/>
-    <circle class="dot" cx="36.0" cy="148.0" r="1.5"/>
-    <circle class="dot" cx="52.0" cy="148.0" r="1.5"/>
-    <circle class="dot" cx="68.0" cy="148.0" r="1.5"/>
-    <circle class="dot" cx="84.0" cy="148.0" r="1.5"/>
-    <circle class="dot" cx="16.0" cy="152.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="152.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="152.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="152.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="152.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="152.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="152.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="152.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="152.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="152.0" r="1.5"/>
-    <circle class="dot" cx="104.0" cy="152.0" r="1.5"/>
-    <circle class="dot" cx="120.0" cy="152.0" r="1.5"/>
-    <circle class="dot" cx="24.0" cy="160.0" r="1.5"/>
-    <circle class="dot" cx="32.0" cy="160.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="160.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="160.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="160.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="160.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="160.0" r="1.5"/>
-    <circle class="dot" cx="80.0" cy="160.0" r="1.5"/>
-    <circle class="dot" cx="88.0" cy="160.0" r="1.5"/>
-    <circle class="dot" cx="96.0" cy="160.0" r="1.5"/>
-    <circle class="dot" cx="112.0" cy="160.0" r="1.5"/>
-    <circle class="dot" cx="40.0" cy="168.0" r="1.5"/>
-    <circle class="dot" cx="56.0" cy="168.0" r="1.5"/>
-    <circle class="dot" cx="72.0" cy="168.0" r="1.5"/>
-    <circle class="dot" cx="48.0" cy="176.0" r="1.5"/>
-    <circle class="dot" cx="64.0" cy="176.0" r="1.5"/>
+    <rect class="dot" x="98.0" y="-2.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="2.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="2.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="2.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="2.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="2.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="2.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="2.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="2.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="2.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="6.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="10.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="10.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="10.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="10.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="10.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="10.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="10.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="10.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="10.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="10.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="10.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="10.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="130.0" y="10.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="138.0" y="10.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="130.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="142.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="150.0" y="14.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="130.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="138.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="146.0" y="18.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="142.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="150.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="158.0" y="22.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="130.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="138.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="146.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="154.0" y="26.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="130.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="142.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="150.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="158.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="166.0" y="30.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="130.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="138.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="146.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="154.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="162.0" y="34.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="138.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="142.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="150.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="158.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="166.0" y="38.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="130.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="138.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="146.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="154.0" y="42.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="130.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="142.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="150.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="158.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="166.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="174.0" y="46.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="130.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="138.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="146.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="154.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="162.0" y="50.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="142.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="150.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="158.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="166.0" y="54.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="130.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="138.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="146.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="154.0" y="58.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="6.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="130.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="142.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="150.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="158.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="166.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="174.0" y="62.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="130.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="138.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="146.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="162.0" y="66.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="6.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="142.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="150.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="158.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="166.0" y="70.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="2.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="130.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="138.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="154.0" y="74.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="2.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="6.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="142.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="150.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="158.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="166.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="174.0" y="78.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="2.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="130.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="138.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="146.0" y="82.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="6.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="142.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="150.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="158.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="166.0" y="86.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="2.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="138.0" y="90.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="2.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="6.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="142.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="150.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="158.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="166.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="174.0" y="94.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="2.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="130.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="146.0" y="98.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="6.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="142.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="150.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="166.0" y="102.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="2.0" y="106.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="106.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="106.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="106.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="106.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="106.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="106.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="106.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="106.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="106.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="106.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="106.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="106.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="106.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="106.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="122.0" y="106.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="2.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="6.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="142.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="150.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="158.0" y="110.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="2.0" y="114.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="114.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="114.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="114.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="114.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="114.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="114.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="114.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="114.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="114.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="114.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="114.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="114.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="114.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="114.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="130.0" y="114.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="6.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="150.0" y="118.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="122.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="122.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="122.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="122.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="122.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="122.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="122.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="122.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="122.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="122.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="122.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="106.0" y="122.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="6.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="142.0" y="126.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="130.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="130.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="130.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="130.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="130.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="130.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="130.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="130.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="130.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="130.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="130.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="98.0" y="130.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="114.0" y="130.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="6.0" y="134.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="134.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="134.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="134.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="134.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="134.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="134.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="134.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="134.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="134.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="134.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="134.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="134.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="134.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="134.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="134.0" y="134.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="10.0" y="138.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="26.0" y="138.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="138.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="42.0" y="138.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="138.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="58.0" y="138.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="138.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="74.0" y="138.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="90.0" y="138.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="142.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="142.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="142.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="142.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="142.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="142.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="142.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="142.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="142.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="142.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="142.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="142.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="142.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="142.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="126.0" y="142.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="18.0" y="146.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="34.0" y="146.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="50.0" y="146.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="66.0" y="146.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="82.0" y="146.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="14.0" y="150.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="150.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="150.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="150.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="150.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="150.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="150.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="150.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="150.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="150.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="102.0" y="150.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="118.0" y="150.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="22.0" y="158.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="30.0" y="158.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="158.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="158.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="158.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="158.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="158.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="78.0" y="158.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="86.0" y="158.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="94.0" y="158.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="110.0" y="158.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="38.0" y="166.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="54.0" y="166.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="70.0" y="166.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="46.0" y="174.0" width="4.0" height="4.0"/>
+    <rect class="dot" x="62.0" y="174.0" width="4.0" height="4.0"/>
   </g>
 </svg>
