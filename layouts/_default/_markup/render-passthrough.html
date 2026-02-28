@@ -1,0 +1,2 @@
+{{- $opts := dict "displayMode" (eq .Type "block") "output" "htmlAndMathml" -}}
+{{- transform.ToMath .Inner $opts -}}

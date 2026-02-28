@@ -9,9 +9,13 @@ Compute libraries, like CUDA and OpenCL, are responsible for handling the comput
 
 In this article, we explore the bare-bones of a compute library, the implementations of kernels like `saxpy`, `sdot`, and `sgemm`, and compare the performance of compute over the rendering pipeline to that of `cuBLAS`.
 
+{{< alert "note" >}}
+Benchmarks in this article measured total program runtime, not isolated kernel execution. For smaller workloads, initialization overhead likely accounts for some or all of the performance difference. The large-matrix results are probably more representative of actual throughput differences. The tests were conducted with a GPU from 2017; don't expect this to be practical on modern systems, nonetheless *slightly* older ones. Take all comparisons with a grain of salt.
+{{< /alert >}}
+
 ## design
 
-Our library will make use of *fragment shaders*, rather than the {{< note title="\"new\"" >}} Compute shaders were introduced in 2012. {{< /note >}} *compute shaders* included in OpenGL 4.3 and above. The goal of this project is achieving performant compute through the rendering pipeline, which compute shaders are not a part of[^1].
+Our library will make use of *fragment shaders*, rather than the "new"[^4] *compute shaders* included in OpenGL 4.3 and above. The goal of this project is achieving performant compute through the rendering pipeline, which compute shaders are not a part of[^1].
 
 Fragment shaders are the last shaders to be executed in the rendering pipeline[^2]. Each sample of the pixels covered by a primitive (in our case, this primitive is a quad which covers the entire window) generates a "fragment", meaning our shader will be invoked for every pixel in our pixel buffer. This quad will cover the entire window space, allowing our fragment shader to generate fragments for every pixel.
 
@@ -450,7 +454,7 @@ The general matrix multiply is challenging function to implement, with regard to
 1. Written as a new shader
 2. Perform `scopy` & `sdot` on every element in `C`
 
-Of these two options, the former makes the most sense. The latter, although requiring less work, would result in an implementation that is extremely slow with large matrices. This is because we would be making over {{< note title="`m*n*4`" >}} The `4` comes from the amount of shaders we call: `scopy` three times, `sdot` once. `m*n` is how many elements are in matrix `C`. {{< /note >}} draw calls, as we would copy portions of matrices `A` and `B` into vectors, performing the dot product (which has additional draw calls for reduction), and copy the result element by element.
+Of these two options, the former makes the most sense. The latter, although requiring less work, would result in an implementation that is extremely slow with large matrices. This is because we would be making over `m*n*4`[^5] draw calls, as we would copy portions of matrices `A` and `B` into vectors, performing the dot product (which has additional draw calls for reduction), and copy the result element by element.
 
 As such, writing a single shader to handle all these operations would be significantly faster, as it would only require a single draw call.
 
@@ -591,7 +595,7 @@ In the end, we see some significant performance gains over the non-optimized sha
 
 ## results
 
-The {{< note title="results" >}} Tests were performed on Linux (using DE) using a `GeForce GTX 1050` (`545.29.06`, CUDA Version: `12.3`) {{< /note >}} below are a measure of each of the respective program's entire runtime. This is done to not only benchmark the kernels themselves, but the speed of memory transfer (`cudaMemcpy` vs `glblasMemcpy`) aswell.
+The results[^6] below are a measure of each of the respective program's entire runtime. This is done to not only benchmark the kernels themselves, but the speed of memory transfer (`cudaMemcpy` vs `glblasMemcpy`) aswell.
 
 | Demo | N | Size | cuBLAS | glBLAS | Improvement |
 | ------ | ------ | ------ | ------ | ------ | ------ |
@@ -629,3 +633,6 @@ Nonetheless compute over fragment shaders proved to be quite viable for small to
 [^1]: [https://www.khronos.org/opengl/wiki/Compute_Shader#Dispatch](https://www.khronos.org/opengl/wiki/Compute_Shader#Dispatch)
 [^2]: [https://www.khronos.org/opengl/wiki/Rendering_Pipeline_Overview#Pipeline](https://www.khronos.org/opengl/wiki/Rendering_Pipeline_Overview#Pipeline)
 [^3]: [https://www.khronos.org/opengl/wiki/Image_Format](https://www.khronos.org/opengl/wiki/Image_Format)
+[^4]: Compute shaders were introduced in 2012.
+[^5]: The `4` comes from the amount of shaders we call: `scopy` three times, `sdot` once. `m*n` is how many elements are in matrix `C`.
+[^6]: Tests were performed on Linux (using DE) using a `GeForce GTX 1050` (`545.29.06`, CUDA Version: `12.3`)

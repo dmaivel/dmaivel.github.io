@@ -7,6 +7,7 @@
 <link rel="preload" href="/fonts/google-sans-v67-greek_latin_symbols-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/roboto-slab-v36-greek_latin-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ "css/vs-dark.css" | relURL }}">
+<link rel="stylesheet" href="{{ "katex/katex.min.css" | relURL }}">
 {{ partial "opengraph.html" . }}
 <style>
   html {
@@ -15,6 +16,9 @@
     -ms-text-size-adjust: 100%; /* IE/Edge */
     text-size-adjust: 100%; /* Standard property */
     color-scheme: dark;
+    scrollbar-color: #333334 #121214;
+    /* scrollbar-width: thin; */
+    scrollbar-gutter: stable both-edges;
   }
 
   * {
@@ -271,9 +275,6 @@
     font-family: 'Roboto Slab', sans-serif;
     background-color: #121214;
     color: #d4d4d4;
-
-    scrollbar-color: #333334 #121214;
-    scrollbar-width: thin;
   }
 
   .table-wrapper {
@@ -283,18 +284,11 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Contain MathJax */
-  .MathJax, .MathJax_Display {
+  /* Contain KaTeX */
+  .katex-display {
     overflow-x: auto;
     overflow-y: hidden;
     max-width: 100%;
-  }
-
-  /* Alternative: scale down MathJax on mobile */
-  @media (max-width: 768px) {
-    .MathJax {
-      font-size: 90% !important;
-    }
   }
 
   h1, h2, h3, h4, h5, h6, .post-date, .post-tag {
@@ -715,53 +709,7 @@
       padding: 2px 8px;
       border-radius: 4px;
   }
-
 </style>
-<script>
-  (function() {
-    document.addEventListener('DOMContentLoaded', function() {
-      const buttons = document.querySelectorAll('.note-toggle');
-      
-      buttons.forEach(button => {
-        if (!button.hasAttribute('data-initialized')) {
-          button.setAttribute('data-initialized', 'true');
-          button.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const expanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !expanded);
-            const content = this.nextElementSibling;
-            content.setAttribute('aria-hidden', expanded);
-
-            buttons.forEach(otherButton => {
-              if (otherButton !== this && otherButton.getAttribute('aria-expanded') === 'true') {
-                otherButton.setAttribute('aria-expanded', 'false');
-                otherButton.nextElementSibling.setAttribute('aria-hidden', 'true');
-              }
-            });
-          });
-        }
-      });
-  
-      document.addEventListener('click', function(event) {
-        if (!event.target.closest('.note')) {
-          buttons.forEach(button => {
-            button.setAttribute('aria-expanded', 'false');
-            button.nextElementSibling.setAttribute('aria-hidden', 'true');
-          });
-        }
-      });
-  
-      document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-          buttons.forEach(button => {
-            button.setAttribute('aria-expanded', 'false');
-            button.nextElementSibling.setAttribute('aria-hidden', 'true');
-          });
-        }
-      });
-    });
-  })();
-</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 </head>
 <body>

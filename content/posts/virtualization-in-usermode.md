@@ -97,7 +97,7 @@ what not), while the other program is
 what causes these faults.
 ```
 
-By utilizing {{< note title="fork and ptrace" >}} note that neither of these solutions will necessarily grant you the abilty to elegantly switch between 32-bit and 64-bit; so, instead of modfying the segment registers, you could use `posix_spawn` to launch architecture specific vms {{< /note >}}, we bring down the risk of corruption significantly as we are able to spawn a clone of our current process, effectively splitting into two. Our forks only task is to signal **PTRACE_TRACEME** and **SIGSTOP**, allowing the parent to attach to the child process and begin initialization.
+By utilizing fork and ptrace[^8], we bring down the risk of corruption significantly as we are able to spawn a clone of our current process, effectively splitting into two. Our forks only task is to signal **PTRACE_TRACEME** and **SIGSTOP**, allowing the parent to attach to the child process and begin initialization.
 
 ## basic physical memory implementation
 
@@ -159,7 +159,7 @@ syscall(SYS_arch_prctl, ARCH_SET_CPUID, NULL);
 
 By calling the syscall using the given code, we can make our fork generate **SIGSEGV** upon invoking `cpuid`, giving us full control over its behavior.
 
-This syscall can also be used for getting/setting the FS/GS {{< note title="registers" >}} segment registers often contain critical process data, so modifying them will result in negative side effects {{< /note >}}, however will likely result in undefined behavior as **ARCH_SET_GS** may be disabled in some kernels and **FS** already being in use by threading libraries.
+This syscall can also be used for getting/setting the FS/GS registers[^9], however will likely result in undefined behavior as **ARCH_SET_GS** may be disabled in some kernels and **FS** already being in use by threading libraries.
 
 ### syscall emulation
 
@@ -197,3 +197,5 @@ Another solution using *ptrace* is to single step through the executing programs
 [^5]: [https://wiki.osdev.org/Real_Mode](https://wiki.osdev.org/Real_Mode)
 [^6]: [https://man7.org/linux/man-pages/man2/vm86.2.html](https://man7.org/linux/man-pages/man2/vm86.2.html)
 [^7]: [https://lkml.org/lkml/2015/7/9/548](https://lkml.org/lkml/2015/7/9/548)
+[^8]: Note that neither of these solutions will necessarily grant you the ability to elegantly switch between 32-bit and 64-bit; so, instead of modifying the segment registers, you could use `posix_spawn` to launch architecture specific VMs.
+[^9]: Segment registers often contain critical process data, so modifying them will result in negative side effects.

@@ -42,11 +42,24 @@
     .home:hover {
         color: #a78bfa;
     }
+
+    .home-logo {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        -webkit-mask: url(/logo_squares.svg) no-repeat center / contain;
+        mask: url(/logo_squares.svg) no-repeat center / contain;
+        vertical-align: middle;
+    }
+    .home:hover .home-logo {
+        background-color: #a78bfa;
+    }
 </style>
 
 <div class="nav_stuff">
     <h2 style="margin-bottom: 0; margin-top: 0; text-decoration: underline; text-decoration-color: #a78bfa; font-size: 24px;">
-        <a class="home" href="/" style="text-decoration-color: #a78bfa; font-family: 'Roboto Slab'; font-size: 42px;">λ</a>
+        <a class="home" href="/" style="text-decoration: none;"><span class="home-logo"></span></a>
     </h2>
     <div style="justify-content: center; display: flex; gap: 16px">
         <h2 style="margin-bottom: 0; margin-top: 0; text-decoration: underline; text-decoration-color: #a78bfa; font-size: 24px;">
