@@ -27,4 +27,14 @@
   <div class="content">
     {{ .Content }}
   </div>
+  <hr>
+  <a href="https://github.com/sponsors/dmaivel" style="display: inline-block; text-decoration: none; color: #bd824a; border: 2px solid #850; padding: 8px; animation: donate-flash 3s ease-in-out infinite; float: right; margin-bottom: 16px;">
+    if you enjoyed this post, please consider supporting my work!
+  </a>
+  <style>
+    @keyframes donate-flash {
+      0%, 100% { border-color: #382a1d; }
+      50% { border-color: #bd834d; }
+    }
+  </style>
 {{ end }}
