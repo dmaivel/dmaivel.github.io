@@ -33,7 +33,7 @@
 /* NameEntity */ .chroma .ni { color: #d4d4d4; }
 /* NameException */ .chroma .ne { color: #4ec9b0; }
 /* NameFunction */ .chroma .nf { color: #dcdcaa; }
-/* NameFunctionMagic */ .chroma .fm { color: #dcdcaa; }
+/* NameFunctionMagic */ .chroma .fm { color: #569cd6; }
 /* NameProperty */ .chroma .py {}
 /* NameLabel */ .chroma .nl { color: #d4d4d4; }
 /* NameNamespace */ .chroma .nn { color: #d4d4d4; }

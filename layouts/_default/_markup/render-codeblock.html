@@ -1,0 +1,48 @@
+{{ $result := transform.HighlightCodeBlock . }}
+{{ $code := $result.Wrapped }}
+
+{{/* name:: → type */}}
+{{ $code = replaceRE `(<span class="n">)(\w+)(</span>::)`
+    `<span class="kt">${2}</span>::` $code }}
+
+{{/* ::Uppercase( → type constructor/variant */}}
+{{ $code = replaceRE `(::<span class="n">)([A-Z]\w*)(</span><span class="p">\()`
+    `::<span class="no">${2}</span><span class="p">(` $code }}
+
+{{/* ::Uppercase without ( → type/variant */}}
+{{ $code = replaceRE `(::<span class="n">)([A-Z]\w*)(</span>)`
+    `::<span class="no">${2}</span>` $code }}
+
+{{/* Reclassify specific macros */}}
+{{ $code = replaceRE `<span class="nb">(NULL)</span>`
+    `<span class="no">${1}</span>` $code }}
+
+{{/* Reclassify specific macros */}}
+{{ $code = replaceRE `<span class="n">(PTRACE_GETREGSET|PTRACE_SETREGSET|PTRACE_CONT|SYS_arch_prctl|ARCH_SET_CPUID|NT_PRSTATUS|PROT_READ|PROT_WRITE|PROT_EXEC|MAP_SHARED|MAP_ANONYMOUS|MAP_FIXED)</span>`
+    `<span class="no">${1}</span>` $code }}
+
+{{/* ::lowercase( → function */}}
+{{ $code = replaceRE `(::<span class="n">)([a-z]\w*)(</span><span class="p">\()`
+    `::<span class="nf">${2}</span><span class="p">(` $code }}
+
+{{/* .name( → function */}}
+{{ $code = replaceRE `(<span class="n">)(\w+)(</span><span class="p">\()`
+    `<span class="nf">${2}</span><span class="p">(` $code }}
+
+{{/* .name → attribute */}}
+{{ $code = replaceRE `(<span class="o">\.</span><span class="n">)(\w+)(</span>)`
+    `<span class="o">.</span><span class="na">${2}</span>` $code }}
+
+{{/* Reclassify specific primitive types from kt → k */}}
+{{ $code = replaceRE `<span class="kt">(void|int|float|bool|char|str|u8|u16|u32|u64|u128|i8|i16|i32|i64|i128|f32|f64|usize|isize|unsigned|signed)</span>`
+    `<span class="k">${1}</span>` $code }}
+
+{{/* Reclassify specific types to kt that were being mistreated as variable names */}}
+{{ $code = replaceRE `<span class="n">(vec2|vec3|vec4|sampler2D|uniform|in|out)</span>`
+    `<span class="k">${1}</span>` $code }}
+
+{{/* Reclassify specific types to kt that were being mistreated as variable names */}}
+{{ $code = replaceRE `<span class="nf">(ArchRegisterId)</span>`
+    `<span class="kt">${1}</span>` $code }}
+
+{{ $code | safeHTML }}
