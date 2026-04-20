@@ -294,8 +294,8 @@
   h1, h2, h3, h4, h5, h6, .post-date, .post-tag {
     /* font-family: RobotoSlab, sans-serif */
     font-family: Google Sans Flex;
-    text-decoration: underline #a098b8 solid;
-    -webkit-text-decoration: underline #a098b8 solid;
+    /* text-decoration: underline #aea1d4 solid; */
+    /* -webkit-text-decoration: underline #aea1d4 solid; */
   }
 
   a.footnote-ref {
@@ -364,12 +364,16 @@
   }
 
   a {
-    text-decoration-color: #a098b8;
+    text-decoration: none;
     color: #d4d4d4;
   }
 
   a:hover:not(sup a) {
-    color: #a098b8;
+    color: #aea1d4;
+  }
+
+  a:not(:is(h1, h2, h3, h4, h5, h6, span) a) {
+    text-decoration: dotted underline 1px #aea1d4;
   }
 
   code:not(pre code) {
@@ -389,10 +393,10 @@
     text-decoration: none;
   }
 
-  h1 a:hover, h2 a:hover, h3 a:hover, 
+  /* h1 a:hover, h2 a:hover, h3 a:hover, 
   h4 a:hover, h5 a:hover, h6 a:hover {
     text-decoration: underline;
-  }
+  } */
 
   #suggestions {
     max-width: 42em;
@@ -450,7 +454,7 @@
   .note {
     /* display: inline-block; */
     position: relative;
-    color: #a098b8;
+    color: #aea1d4;
     /*color: ;*/
     font-size: inherit;
   }
@@ -717,8 +721,8 @@
   .tag {
       font-family: JetBrains Mono;
       font-size: 0.9rem;
-      color: #a098b8;
-      background: #a098b81a;
+      color: #aea1d4;
+      background: #aea1d41a;
       padding: 2px 8px;
       border-radius: 4px;
   }
