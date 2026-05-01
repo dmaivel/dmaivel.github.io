@@ -13,18 +13,16 @@ I explore compilers, operating systems, virtualization, and runtimes. My project
 
 - [**SharedGL**](https://github.com/dmaivel/SharedGL)<br>
   OpenGL 4.6 for Windows guests in QEMU/KVM via shared memory or sockets
-- [**libdecomp**](https://github.com/dmaivel/libdecomp)<br>
-  library for decompiling x86 & ARM64 bytecode into optimized source code
+- [**ntoseye**](https://github.com/dmaivel/ntoseye)<br>
+  Windows kernel debugger for Linux hosts running Windows under QEMU/KVM
 - [**covirt**](https://github.com/dmaivel/covirt)<br>
   x86-64 code virtualizer w/ various obfuscation passes, including MBA
-- [**ntoseye**](https://github.com/dmaivel/ntoseye)<br>
-  windows kernel debugger for Linux hosts running Windows under QEMU/KVM
+- [**libdecomp**](https://github.com/dmaivel/libdecomp)<br>
+  library for decompiling x86 & ARM64 bytecode into optimized source code
 - [**vscc**](https://github.com/dmaivel/vscc)<br>
   x86-64 JIT compiler backend with no third party dependencies
 - [**glBLAS**](https://github.com/dmaivel/glBLAS)<br>
-  BLAS functions written in OpenGL fragment shaders, challenging cuBLAS
-- [**cugrad**](https://github.com/dmaivel/cugrad)<br>
-  automatic differentiation library written in C++ and CUDA from scratch
+  BLAS functions written in OpenGL fragment shaders
 
 <h4>contact</h4>
 
