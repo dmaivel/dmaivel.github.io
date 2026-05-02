@@ -1,5 +1,5 @@
 ---
-title: "outperform cublas with opengl"
+title: "BLAS with fragment shaders"
 subtitle: "writing BLAS routines in fragment shaders."
 date: 2024-05-05
 tags: ["programming", "research"]
