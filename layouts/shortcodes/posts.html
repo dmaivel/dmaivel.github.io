@@ -37,13 +37,9 @@ ul li::before {
     <div style="margin-bottom: 48px;">
        <span style="color: #888; font-family: 'Roboto Slab'">{{ .Date.Format "Jan 2, 2006" }} • {{ .WordCount }} words • {{ .ReadingTime }} mins</span>
       <div class="line">
-        <span><a style="font-family: Google Sans Flex; font-size: 52px; font-weight: bold;" href="{{ .RelPermalink }}">{{ .Title }}</a></span>
+        <span><a style="font-family: Google Sans Flex; font-size: 48px; font-weight: bold;" href="{{ .RelPermalink }}">{{ .Title }}</a></span>
       </div>
-      <div class="post-tags">
-          {{ range .Params.tags }}
-            <span class="tag">#{{ . }}</span>
-          {{ end }}
-      </div>
+      {{ partial "post-tags.html" (dict "context" . "style" "list") }}
       <!-- <br> -->
        <br>
       <div class="blog-summary">

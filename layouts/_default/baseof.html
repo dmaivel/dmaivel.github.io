@@ -256,9 +256,9 @@
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: -1;
     opacity: 0.6;
-    
+
     background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='%23333333' fill-opacity='1.0'/%3E%3C/svg%3E");
-    
+
     -webkit-mask-image: radial-gradient(circle at center, transparent 10%, black 100%);
     mask-image: radial-gradient(circle at center, transparent 10%, black 100%);
 
@@ -270,7 +270,7 @@
     padding: 0 10px;
     margin: 50px auto;
     margin-top: 20px;
-    max-width: 800px;
+    max-width: 720px;
     text-align: left;
     font-family: 'Roboto Slab', sans-serif;
     background-color: #121214;
@@ -323,14 +323,14 @@
   }
 
   hr {
-    border: none; 
-    height: 1px; 
+    border: none;
+    height: 1px;
     background-color: #444;
   }
 
   h1 {
     text-align: left;
-    font-size: 52px;
+    font-size: 48px;
   }
 
   h2 {
@@ -397,7 +397,7 @@
     text-decoration: none;
   }
 
-  /* h1 a:hover, h2 a:hover, h3 a:hover, 
+  /* h1 a:hover, h2 a:hover, h3 a:hover,
   h4 a:hover, h5 a:hover, h6 a:hover {
     text-decoration: underline;
   } */
@@ -515,7 +515,7 @@
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
     white-space: -pre-wrap;
-    white-space: -o-pre-wrap; 
+    white-space: -o-pre-wrap;
     word-wrap: break-word;
   }
 
@@ -712,7 +712,7 @@
     .sidenote-version {
       display: inline;
     }
-    
+
     .responsive-note .popup-note {
       display: none;
     }
@@ -721,7 +721,7 @@
   .column-inner > *:first-child { margin-top: 0; }
   .column-inner > *:last-child { margin-bottom: 0; }
 
-  .post-tags { display: flex; gap: 0.5rem; }
+  .post-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .tag {
       font-family: JetBrains Mono;
       font-size: 0.9rem;
@@ -729,6 +729,11 @@
       background: #aea1d41a;
       padding: 2px 8px;
       border-radius: 4px;
+      text-decoration: none;
+  }
+  a.tag:hover {
+      background: #aea1d433;
+      color: #c9bdf0;
   }
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">

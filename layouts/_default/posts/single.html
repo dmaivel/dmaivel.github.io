@@ -16,11 +16,7 @@
     {{ .Date.Format "Jan 2, 2006" }} • {{ .WordCount }} words • {{ .ReadingTime }} mins
   </div>
   <h1 style="margin-bottom: 0px; margin-top: 0px;">{{ .Title }}</h1>
-  <div class="post-tags">
-    {{ range .Params.tags }}
-      <span class="tag">#{{ . }}</span>
-    {{ end }}
-  </div>
+  {{ partial "post-tags.html" (dict "context" . "style" "single") }}
   <br>
   <!-- <hr> -->
   <!--{{ .TableOfContents }}-->

@@ -7,7 +7,7 @@ layout: "page"
 
 <h4 style="margin-top: 24px">about me</h4>
 
-I explore compilers, operating systems, virtualization, and runtimes. My projects reflect what I've learned along the way.
+I explore compilers, operating systems, virtualization, and runtimes.
 
 <h4>projects</h4>
 
