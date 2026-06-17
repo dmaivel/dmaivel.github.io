@@ -1,4 +1,19 @@
 {{ define "main" }}
-  <title>dmaivel</title>
-  {{ .Content }}
+  <img class="avatar" src="https://avatars.githubusercontent.com/u/38770072?v=4" alt="dmaivel">
+
+  <h1 class="site-title">dmaivel</h1>
+  <p>I explore compilers, operating systems, virtualization, and runtimes.</p>
+
+  <h2>posts</h2>
+  {{ partial "posts.html" . }}
+
+  <h2>projects</h2>
+  <ul>
+    <li><a href="https://github.com/dmaivel/SharedGL">SharedGL</a><br><span class="item-description">OpenGL 4.6 for Windows guests in QEMU/KVM via shared memory or sockets</span></li>
+    <li><a href="https://github.com/dmaivel/ntoseye">ntoseye</a><br><span class="item-description">Windows kernel debugger for Linux hosts running Windows under QEMU/KVM</span></li>
+    <li><a href="https://github.com/dmaivel/covirt">covirt</a><br><span class="item-description">x86-64 code virtualizer with obfuscation passes, including MBA</span></li>
+    <li><a href="https://github.com/dmaivel/libdecomp">libdecomp</a><br><span class="item-description">library for decompiling x86 and ARM64 bytecode into optimized source code</span></li>
+    <li><a href="https://github.com/dmaivel/vscc">vscc</a><br><span class="item-description">x86-64 JIT compiler backend with no third party dependencies</span></li>
+    <li><a href="https://github.com/dmaivel/glBLAS">glBLAS</a><br><span class="item-description">BLAS functions written in OpenGL fragment shaders</span></li>
+  </ul>
 {{ end }}

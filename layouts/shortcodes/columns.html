@@ -1,8 +1,8 @@
-{{/* layouts/shortcodes/columns.html */}}
-<div style="margin-top: 0 !important; display: grid; width: 100%; grid-template-columns: repeat({{ len (split .Inner "<--->") }}, 1fr); gap: 20px;">
-    {{ range split .Inner "<--->" }}
+{{ $columns := split .Inner "<--->" }}
+<div class="columns" style="--columns: {{ len $columns }};">
+    {{ range $columns }}
         <div style="min-width: 0; overflow-wrap: break-word;" class="column-inner">
-            {{ $content := . | markdownify }}{{ if and $content (not (hasPrefix $content "<")) }}<p>{{ $content }}</p>{{ else }}{{ $content }}{{ end }}
+            {{ $content := . | markdownify }}{{ $trimmed := strings.TrimSpace $content }}{{ if and $trimmed (not (hasPrefix $trimmed "<")) }}<p>{{ $content }}</p>{{ else }}{{ $content }}{{ end }}
         </div>
     {{ end }}
 </div>

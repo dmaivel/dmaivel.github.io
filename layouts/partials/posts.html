@@ -1,0 +1,17 @@
+<ul>
+  {{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <span class="muted">/ {{ .Date.Format "Jan 2, 2006" }}</span>
+      {{ with .Params.tags }}
+        <span class="post-tags">
+          <span class="muted">/ </span>
+          {{- range $i, $tag := . -}}
+            {{- $slug := $tag | urlize -}}
+            {{- if $i }}, {{ end -}}<a href="/tags#{{ $slug }}">#{{ $tag }}</a>
+          {{- end }}
+        </span>
+      {{ end }}
+    </li>
+  {{ end }}
+</ul>

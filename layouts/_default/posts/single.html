@@ -1,36 +1,14 @@
 {{ define "main" }}
-<title>{{ .Title }} - dmaivel</title>
-  <br>
-  <style>
-    .landscape-check {
-      display: none;
-    }
+  <h1>{{ .Title }}</h1>
+  <p class="muted post-meta">{{ .Date.Format "Jan 2, 2006" }} / {{ .WordCount }} words / {{ .ReadingTime }} min read{{ with .Params.tags }} / {{ range $i, $tag := . }}{{ $slug := $tag | urlize }}{{ if $i }}, {{ end }}<a href="/tags#{{ $slug }}">#{{ $tag }}</a>{{ end }}{{ end }}</p>
 
-    @media screen and (orientation:portrait) {
-      .landscape-check {
-        display: block;
-      }
-    }
-  </style>
-  <div style="color: #888;">
-    {{ .Date.Format "Jan 2, 2006" }} • {{ .WordCount }} words • {{ .ReadingTime }} mins
-  </div>
-  <h1 style="margin-bottom: 0px; margin-top: 0px;">{{ .Title }}</h1>
-  {{ partial "post-tags.html" (dict "context" . "style" "single") }}
-  <br>
-  <!-- <hr> -->
-  <!--{{ .TableOfContents }}-->
-  <div class="content">
-    {{ .Content }}
-  </div>
+  {{ .Content }}
+
   <hr>
-  <a href="https://github.com/sponsors/dmaivel" style="display: inline-block; text-decoration: none; color: #bd824a; border: 2px solid #850; padding: 8px; animation: donate-flash 3s ease-in-out infinite; float: right; margin-bottom: 16px;">
-    if you enjoyed this post, please consider supporting my work!
-  </a>
-  <style>
-    @keyframes donate-flash {
-      0%, 100% { border-color: #382a1d; }
-      50% { border-color: #bd834d; }
-    }
-  </style>
+  <p><a class="support-link" href="https://github.com/sponsors/dmaivel">support my work &lt;3</a></p>
+
+  <footer class="site-footer">
+    <hr>
+    <p class="site-mark"><a class="site-mark-link" href="/" aria-label="home"></a></p>
+  </footer>
 {{ end }}

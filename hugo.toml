@@ -1,6 +1,6 @@
 disableKinds = ['taxonomy', 'term']
 baseURL = 'https://dmaivel.com/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'dmaivel'
 [markup]
   [markup.highlight]
@@ -18,5 +18,7 @@ title = 'dmaivel'
   autoHeadingIDType = "github"
 [params]
   favicon = "./favicon.ico"
+  description = 'I explore compilers, operating systems, virtualization, and runtimes.'
+  ogLocale = 'en_US'
 [permalinks]
   posts = "/:contentbasename/"

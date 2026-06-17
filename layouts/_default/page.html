@@ -1,22 +1,4 @@
 {{ define "main" }}
-<title>{{ .Title }} - dmaivel</title>
-  <!-- <br> -->
-  <style>
-    .landscape-check {
-      display: none;
-    }
-
-    @media screen and (orientation:portrait) {
-      .landscape-check {
-        display: block;
-      }
-    }
-
-    li { margin-bottom: 8px; }
-  </style>
-  <!-- <hr> -->
-  <!--{{ .TableOfContents }}-->
-  <div class="content">
-    {{ .Content }}
-  </div>
+  <h1 class="page-title">{{ .Title }}</h1>
+  {{ .Content }}
 {{ end }}

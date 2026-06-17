@@ -1,30 +1,32 @@
-<meta property="og:title" content="{{ .Title }} · dmaivel" />
-<!-- <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Content | strings.Truncate 42 }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" /> -->
+{{- $title := cond .IsHome .Site.Title (printf "%s · %s" .Title .Site.Title) -}}
+{{- $description := .Description | default .Params.subtitle | default .Site.Params.description -}}
+
+<meta name="description" content="{{ $description }}" />
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:locale" content="{{ .Site.Params.ogLocale }}" />
 
-<!-- {{- if .IsPage }}
+{{- if .IsPage }}
 {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
 <meta property="article:section" content="{{ .Section }}" />
 {{ with .PublishDate }}<meta property="article:published_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />{{ end }}
 {{ with .Lastmod }}<meta property="article:modified_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />{{ end }}
-{{- end -}}
+{{- end }}
 
-{{- with .Params.audio }}<meta property="og:audio" content="{{ . }}" />{{ end }}
-{{- with .Params.locale }}<meta property="og:locale" content="{{ . }}" />{{ end }}
-{{- with .Site.Params.title }}<meta property="og:site_name" content="{{ . }}" />{{ end }}
-{{- with .Params.videos }}{{- range . }}
-<meta property="og:video" content="{{ . | absURL }}" />
-{{ end }}{{ end }} -->
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description }}" />
 
-{{- if .IsPage -}}
-  <meta property="og:image" content="{{ .Site.BaseURL }}images/{{.File.BaseFileName}}.png">
+{{- if and .IsPage (eq .Section "posts") -}}
+  {{- $image := printf "images/%s.png" .File.BaseFileName | absURL -}}
+  <meta property="og:image" content="{{ $image }}">
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
-  <!-- Twitter metadata (used by other websites as well) -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{{ .Title }}" />
-  <!-- <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"/> -->
-  <meta name="twitter:image" content="{{ .Site.BaseURL }}images/{{.File.BaseFileName}}.png" />
+  <meta name="twitter:image" content="{{ $image }}" />
+{{- else -}}
+  <meta name="twitter:card" content="summary" />
 {{ end }}

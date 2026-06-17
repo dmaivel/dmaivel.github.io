@@ -1,77 +1,8 @@
-<style>
-    .nav_stuff {
-        margin: auto;
-        text-align: center;
-        display: flex;
-        justify-content: space-between;
-        padding: 4px;
-        /* background-color: #222; */
-    }
-
-    .nav-link {
-        /* background-color: #fff; */
-        /* color: white; */
-        font-size: 16px;
-        padding: 4px;
-        border-radius: 4px;
-        margin-right: 8px;
-        margin-left: 8px;
-    }
-
-    .nav-link {
-        display: flex;
-        align-items: center;
-        color: black;
-        text-decoration: none;
-        /* padding: 0.5rem 1rem; */
-        transition: background-color 0.3s;
-    }
-
-    .nav-link:hover {
-        background-color: inherit;
-    }
-
-    .nav-icon {
-        width: 24px;
-        height: 24px;
-    }
-
-    .home {
-        color: #ddd;
-    }
-    .home:hover {
-        color: #aea1d4;
-    }
-
-    .home-logo {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        background-color: #fff;
-        -webkit-mask: url(/logo_animated.svg) no-repeat center / contain;
-        mask: url(/logo_animated.svg) no-repeat center / contain;
-        vertical-align: middle;
-    }
-    .home:hover .home-logo {
-        background-color: #aea1d4;
-    }
-</style>
-
-<div class="nav_stuff">
-    <h2 style="margin-bottom: 0; margin-top: 0; font-size: 24px; background-color: #121214;">
-        <a class="home" href="/" style="text-decoration: none;"><span class="home-logo"></span></a>
-    </h2>
-    <div style="justify-content: center; display: flex; gap: 16px">
-        <h2 style="margin-bottom: 0; margin-top: 0; font-size: 24px;">
-            <a class="home" href="https://github.com/dmaivel" style="text-decoration-color: #aea1d4; font-family: 'Roboto Slab'; font-size: 20px;">github</a>
-        </h2>
-        <!-- <h2 style="margin-bottom: 0; margin-top: 0; font-size: 24px;">
-            <a class="home" href="/tags" style="text-decoration-color: #aea1d4; font-family: 'Roboto Slab'; font-size: 20px;">tags</a>
-        </h2> -->
-        <h2 style="margin-bottom: 0; margin-top: 0; font-size: 24px;">
-            <a class="home" href="/about" style="text-decoration-color: #aea1d4; font-family: 'Roboto Slab'; font-size: 20px;">about</a>
-        </h2>
-    </div>
-</div>
-
-<br>
+<nav>
+  <a href="{{ "/" | relURL }}">home</a>
+  <span>
+    <a href="https://github.com/dmaivel">github</a>
+    <a href="{{ "/tags" | relURL }}">tags</a>
+    <a href="mailto:contact@dmaivel.com">contact</a>
+  </span>
+</nav>

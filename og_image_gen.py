@@ -53,11 +53,6 @@ def generate_tags_html(tags):
     
     return '\n'.join(tag_elements)
 
-def sanitize_filename(title):
-    sanitized = re.sub(r'[^a-zA-Z0-9 ]', '', title)
-    sanitized = re.sub(r'\s+', '-', sanitized)
-    return sanitized
-
 def extract_metadata_from_built_page(md_file_path):
     md_path = Path(md_file_path)
     filename_stem = md_path.stem
@@ -71,7 +66,7 @@ def extract_metadata_from_built_page(md_file_path):
         with open(built_html, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        metadata_match = re.search(r'(\d+)\s+words\s+•\s+(\d+)\s+mins', content)
+        metadata_match = re.search(r'(\d+)\s+words\s+(?:•|/)\s+(\d+)\s+min', content)
         if metadata_match:
             word_count = metadata_match.group(1)
             read_time = metadata_match.group(2)
@@ -124,13 +119,13 @@ def generate_og_image(md_file, template_path, output_dir):
             temp_html
         ], check=True)
         
-        sanitized_title = sanitize_filename(title)
-        output_file = os.path.join(output_dir, f"{sanitized_title}.png")
+        image_name = Path(md_file).stem
+        output_file = os.path.join(output_dir, f"{image_name}.png")
         
         if os.path.exists('screenshot.png'):
             os.makedirs(output_dir, exist_ok=True)
             os.rename('screenshot.png', output_file)
-            print(f"  Created: {sanitized_title}.png")
+            print(f"  Created: {image_name}.png")
         
     except subprocess.CalledProcessError as e:
         print(f"  Error generating screenshot: {e}")

@@ -1,7 +1,3 @@
 ---
-title: "Home page"
+title: "dmaivel"
 ---
-
-<br>
-
-{{< posts >}}

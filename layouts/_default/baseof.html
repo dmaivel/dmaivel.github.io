@@ -1,747 +1,479 @@
-<!DOCTYPE html>
-<html lang="en" charset="utf-8">
+<!doctype html>
+<html lang="{{ .Site.Language.Locale | default "en" }}">
 <head>
-<link rel="icon" href="{{ .Site.Params.favicon | relURL }}" type="image/x-icon">
-<link rel="preload" href="/fonts/roboto-slab-v36-greek_latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrains-mono-v24-greek_latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/google-sans-v67-greek_latin_symbols-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/roboto-slab-v36-greek_latin-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{{ "css/vs-dark.css" | relURL }}">
-<link rel="stylesheet" href="{{ "katex/katex.min.css" | relURL }}">
-{{ partial "opengraph.html" . }}
-<style>
-  html {
-    -webkit-text-size-adjust: 100%; /* iOS and Safari */
-    -moz-text-size-adjust: 100%; /* Firefox */
-    -ms-text-size-adjust: 100%; /* IE/Edge */
-    text-size-adjust: 100%; /* Standard property */
-    color-scheme: dark;
-    scrollbar-color: #333334 #121214;
-    /* scrollbar-width: thin; */
-    scrollbar-gutter: stable both-edges;
-  }
-
-  * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-  }
-
-  /* google-sans-regular - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Google Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/google-sans-v67-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* google-sans-italic - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Google Sans';
-    font-style: italic;
-    font-weight: 400;
-    src: url('/fonts/google-sans-v67-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* google-sans-500 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Google Sans';
-    font-style: normal;
-    font-weight: 500;
-    src: url('/fonts/google-sans-v67-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* google-sans-500italic - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Google Sans';
-    font-style: italic;
-    font-weight: 500;
-    src: url('/fonts/google-sans-v67-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* google-sans-600 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Google Sans';
-    font-style: normal;
-    font-weight: 600;
-    src: url('/fonts/google-sans-v67-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* google-sans-600italic - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Google Sans';
-    font-style: italic;
-    font-weight: 600;
-    src: url('/fonts/google-sans-v67-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* google-sans-700 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Google Sans';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/fonts/google-sans-v67-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* google-sans-700italic - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Google Sans';
-    font-style: italic;
-    font-weight: 700;
-    src: url('/fonts/google-sans-v67-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-
-  /* google-sans-flex-200 - latin_math_symbols */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Google Sans Flex';
-    font-style: normal;
-    font-weight: 200;
-    src: url('/fonts/google-sans-flex-v16-latin_math_symbols-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* google-sans-flex-300 - latin_math_symbols */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Google Sans Flex';
-    font-style: normal;
-    font-weight: 300;
-    src: url('/fonts/google-sans-flex-v16-latin_math_symbols-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* google-sans-flex-regular - latin_math_symbols */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Google Sans Flex';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/google-sans-flex-v16-latin_math_symbols-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* google-sans-flex-500 - latin_math_symbols */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Google Sans Flex';
-    font-style: normal;
-    font-weight: 500;
-    src: url('/fonts/google-sans-flex-v16-latin_math_symbols-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* google-sans-flex-600 - latin_math_symbols */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Google Sans Flex';
-    font-style: normal;
-    font-weight: 600;
-    src: url('/fonts/google-sans-flex-v16-latin_math_symbols-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* google-sans-flex-700 - latin_math_symbols */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Google Sans Flex';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/fonts/google-sans-flex-v16-latin_math_symbols-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* google-sans-flex-800 - latin_math_symbols */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Google Sans Flex';
-    font-style: normal;
-    font-weight: 800;
-    src: url('/fonts/google-sans-flex-v16-latin_math_symbols-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* google-sans-flex-900 - latin_math_symbols */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Google Sans Flex';
-    font-style: normal;
-    font-weight: 900;
-    src: url('/fonts/google-sans-flex-v16-latin_math_symbols-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-
-  /* roboto-slab-200 - greek_latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Roboto Slab';
-    font-style: normal;
-    font-weight: 200;
-    src: url('/fonts/roboto-slab-v36-greek_latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* roboto-slab-300 - greek_latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Roboto Slab';
-    font-style: normal;
-    font-weight: 300;
-    src: url('/fonts/roboto-slab-v36-greek_latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* roboto-slab-regular - greek_latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Roboto Slab';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/roboto-slab-v36-greek_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* roboto-slab-500 - greek_latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Roboto Slab';
-    font-style: normal;
-    font-weight: 500;
-    src: url('/fonts/roboto-slab-v36-greek_latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* roboto-slab-600 - greek_latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Roboto Slab';
-    font-style: normal;
-    font-weight: 600;
-    src: url('/fonts/roboto-slab-v36-greek_latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* roboto-slab-700 - greek_latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Roboto Slab';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/fonts/roboto-slab-v36-greek_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* roboto-slab-800 - greek_latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Roboto Slab';
-    font-style: normal;
-    font-weight: 800;
-    src: url('/fonts/roboto-slab-v36-greek_latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-
-  /* jetbrains-mono-regular - greek_latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'JetBrains Mono';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/jetbrains-mono-v24-greek_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* jetbrains-mono-italic - greek_latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'JetBrains Mono';
-    font-style: italic;
-    font-weight: 400;
-    src: url('/fonts/jetbrains-mono-v24-greek_latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* jetbrains-mono-600 - greek_latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'JetBrains Mono';
-    font-style: normal;
-    font-weight: 600;
-    src: url('/fonts/jetbrains-mono-v24-greek_latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* jetbrains-mono-600italic - greek_latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'JetBrains Mono';
-    font-style: italic;
-    font-weight: 600;
-    src: url('/fonts/jetbrains-mono-v24-greek_latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-
-  ::selection {
-    background: #835848;
-  }
-
-  .bg-pattern {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: -1;
-    opacity: 0.6;
-
-    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='%23333333' fill-opacity='1.0'/%3E%3C/svg%3E");
-
-    -webkit-mask-image: radial-gradient(circle at center, transparent 10%, black 100%);
-    mask-image: radial-gradient(circle at center, transparent 10%, black 100%);
-
-    pointer-events: none;
-  }
-
-  body {
-    font-size: 18px;
-    padding: 0 10px;
-    margin: 50px auto;
-    margin-top: 20px;
-    max-width: 720px;
-    text-align: left;
-    font-family: 'Roboto Slab', sans-serif;
-    background-color: #121214;
-    color: #d4d4d4;
-  }
-
-  .table-wrapper {
-    overflow-x: auto;
-    max-width: 100%;
-    display: block;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  /* Contain KaTeX */
-  .katex-display {
-    overflow-x: auto;
-    overflow-y: hidden;
-    max-width: 100%;
-  }
-
-  h1, h2, h3, h4, h5, h6, .post-date, .post-tag {
-    /* font-family: RobotoSlab, sans-serif */
-    font-family: Google Sans Flex;
-    /* text-decoration: underline #aea1d4 solid; */
-    /* -webkit-text-decoration: underline #aea1d4 solid; */
-  }
-
-  a.footnote-ref {
-    text-decoration: none;
-    color: #d4d4d4;
-  }
-
-  sup {
-    background: #101010;
-    border: 1px solid #333;
-    border-radius: 3px;
-    padding: 0px 3px;
-    font-size: 0.7em;
-    /* transition: background 0.1s; */
-  }
-
-  sup:hover {
-    background: #835848;
-    /* border-color: #555; */
-  }
-
-  code {
-    font-family: JetBrains Mono, monospace;
-    font-size: 16px;
-  }
-
-  hr {
-    border: none;
-    height: 1px;
-    background-color: #444;
-  }
-
-  h1 {
-    text-align: left;
-    font-size: 48px;
-  }
-
-  h2 {
-    font-size: 32px;
-    margin-top: 42px;
-    margin-bottom: 0px;
-  }
-
-  h3 {
-    font-size: 24px;
-    margin-top: 42px;
-    margin-bottom: 0px;
-  }
-
-  h4 {
-    font-size: 20px;
-    margin-top: 42px;
-    margin-bottom: 0px;
-  }
-
-  h5 {
-    font-size: 18px;
-    margin-top: 42px;
-    margin-bottom: 0px;
-  }
-
-  h6 {
-    font-size: 16px;
-    margin-top: 42px;
-    margin-bottom: 0px;
-  }
-
-  a {
-    text-decoration: none;
-    color: #d4d4d4;
-  }
-
-  a:hover:not(sup a) {
-    color: #aea1d4;
-  }
-
-  a:not(:is(h1, h2, h3, h4, h5, h6, span) a) {
-    text-decoration-line: underline;
-    text-decoration-style: dotted;
-    text-decoration-color: #aea1d4;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
-  }
-
-  code:not(pre code) {
-    background: #101010;
-    border: solid 1px #333;
-    border-radius: 3px;
-    padding: 1px 3px;
-    font-size: 0.9em;
-  }
-
-  p, ul, ol {
-    line-height: 1.6;
-  }
-
-  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  /* h1 a:hover, h2 a:hover, h3 a:hover,
-  h4 a:hover, h5 a:hover, h6 a:hover {
-    text-decoration: underline;
-  } */
-
-  #suggestions {
-    max-width: 42em;
-    margin: 15px auto;
-  }
-
-  footer {
-    position: absolute;
-    left: 5px;
-    bottom: 0;
-  }
-
-  img {
-    /* width: 55%; */
-    margin: 0 auto;
-    display: block;
-  }
-
-  @media only screen and (max-width: 768px) and (orientation: portrait) {
-    img {
-      width: 100%;
-      margin: 0;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+  <link rel="icon" href="{{ .Site.Params.favicon | relURL }}" type="image/x-icon">
+  <link rel="preload" href="/fonts/roboto-slab-v36-greek_latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/roboto-slab-v36-greek_latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/jetbrains-mono-v24-greek_latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ "css/vs.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/vs-dark.css" | relURL }}" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="{{ "katex/katex.min.css" | relURL }}">
+  {{ partial "opengraph.html" . }}
+  <style>
+    @font-face {
+      font-display: block;
+      font-family: "Roboto Slab";
+      font-style: normal;
+      font-weight: 400;
+      src: url("/fonts/roboto-slab-v36-greek_latin-regular.woff2") format("woff2");
     }
-  }
 
-  pre {
-    background: #101010;
-    padding: 1em;
-    border: solid 1px #222;
-    border-radius: 4px;
-    overflow-x: auto;
-    font-size: 14px;
-    /* line-height: 1.5; */
-  }
+    @font-face {
+      font-display: block;
+      font-family: "Roboto Slab";
+      font-style: normal;
+      font-weight: 700;
+      src: url("/fonts/roboto-slab-v36-greek_latin-700.woff2") format("woff2");
+    }
 
-  table,
-  th,
-  td {
-    border: 1px #555 solid;
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 4px;
-    /*-webkit-text-size-adjust: 120%;*/
-  }
+    @font-face {
+      font-display: block;
+      font-family: "JetBrains Mono";
+      font-style: normal;
+      font-weight: 400;
+      src: url("/fonts/jetbrains-mono-v24-greek_latin-regular.woff2") format("woff2");
+    }
 
-  figure {
-    /*border: #111 1px solid;*/
-    padding: 16px;
-  }
-  figcaption h4 {
-    text-align: center;
-  }
+    :root {
+      color-scheme: light;
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #666666;
+      --line: #dddddd;
+      --code-bg: #fbfbfb;
+      --link: #1b56c4;
+      --support-link: #b83280;
+    }
 
-  .note {
-    /* display: inline-block; */
-    position: relative;
-    color: #aea1d4;
-    /*color: ;*/
-    font-size: inherit;
-  }
-
-  .note-toggle {
-    cursor: pointer;
-    font-style: italic;
-    border: none;
-    background: none;
-    padding: 0;
-    border-bottom: 1px dotted;
-    font-size: inherit;
-    font-family: inherit;
-    color: inherit;
-    /*-webkit-text-size-adjust: 140%;*/
-    text-size-adjust: 100%;
-  }
-
-  .note-toggle:focus {
-    outline: 2px dotted #e0e0e0;
-    outline-offset: 2px;
-  }
-
-  .note-content {
-    display: none;
-    position: absolute;
-    /* left: 0; */
-    top: 100%;
-    background: #1a1a1a;
-    /*background: white;*/
-    border: 1px solid #222;
-    padding: 1em;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    z-index: 100;
-    /* min-width: 200px; */
-    color: #e0e0e0;
-    font-size: inherit;
-    /*-webkit-text-size-adjust: 140%;*/
-    text-size-adjust: 100%;
-    text-align: left;
-
-    left: 50%;
-    transform: translateX(-50%);
-    width: max-content;
-    max-width: min(200px, 90vw);
-  }
-
-  .note-toggle[aria-expanded="true"] + .note-content {
-    display: block;
-  }
-
-  .footnotes p {
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;
-  }
-
-  .toc-container {
-    width: 100%;
-    margin-bottom: 1rem;
-    /*border: 1px solid #111;
-    background-color: #f8f8f8;*/
-  }
-
-  .toc-header {
-    padding: 0.5rem;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  .toc-content {
-    padding: 0 1rem 1rem 0rem;
-  }
-
-  .toc-content ul {
-    margin-bottom: 0;
-  }
-
-  .toc-container:focus {
-    outline: 2px solid #0077cc;
-  }
-
-  .alert {
-    padding: 16px;
-    margin: 16px 0;
-    border-left: 4px solid;
-    /* border-radius: 6px; */
-    display: flex;
-    gap: 12px;
-  }
-
-  .alert-icon {
-      flex-shrink: 0;
-      width: 20px;
-      height: 20px;
-      margin-top: 2px;
-  }
-
-  .alert-content {
-      flex: 1;
-  }
-
-  .alert-title {
-      font-weight: 600;
-      margin-bottom: 4px;
-  }
-
-  .alert-note {
-      background: rgba(31, 111, 235, 0.1);
-      border-left-color: #1f6feb;
-  }
-
-  .alert-note .alert-icon {
-      color: #58a6ff;
-  }
-
-  .alert-note .alert-title {
-      color: #58a6ff;
-  }
-
-  .alert-tip {
-      background: rgba(46, 160, 67, 0.1);
-      border-left-color: #2ea043;
-  }
-
-  .alert-tip .alert-icon {
-      color: #3fb950;
-  }
-
-  .alert-tip .alert-title {
-      color: #3fb950;
-  }
-
-  .alert-important {
-      background: rgba(163, 113, 247, 0.1);
-      border-left-color: #a371f7;
-  }
-
-  .alert-important .alert-icon {
-      color: #b083ff;
-  }
-
-  .alert-important .alert-title {
-      color: #b083ff;
-  }
-
-  .alert-warning {
-      background: rgba(187, 128, 9, 0.1);
-      border-left-color: #bb8009;
-  }
-
-  .alert-warning .alert-icon {
-      color: #d29922;
-  }
-
-  .alert-warning .alert-title {
-      color: #d29922;
-  }
-
-  .alert-caution {
-      background: rgba(248, 81, 73, 0.1);
-      border-left-color: #f85149;
-  }
-
-  .alert-caution .alert-icon {
-      color: #ff7b72;
-  }
-
-  .alert-caution .alert-title {
-      color: #ff7b72;
-  }
-
-  .content {
-    counter-reset: h2-greek h3-greek;
-  }
-
-  .content h2 {
-    counter-increment: h2-greek;
-    counter-reset: h3-greek;
-    position: relative;
-  }
-
-  .content h2::before {
-    content: counter(h2-greek, lower-greek) "";
-    color: #555;
-    position: absolute;
-    left: -1.3em;
-  }
-
-  .content h3 {
-    counter-increment: h3-greek;
-    position: relative;
-  }
-
-  .content h3::before {
-    content: counter(h2-greek, lower-greek) "." counter(h3-greek, lower-greek) "";
-    color: #555;
-    position: absolute;
-    left: -2.3em;
-  }
-
-  span.sidenote {
-      display: none;
-
-      @media (min-width: 1060px) {
-          display: block;
-          position: relative;
-          float: right;
-          clear: right;
-          transform: translateY(-15%);
-
-          width: 32%;
-          margin: 0;
-          margin-bottom: 1.1rem;
-          margin-top: 1.1rem;
-          margin-right: -35%;
-          padding: 0.5rem;
-          padding-top: 0;
-          padding-bottom: 0;
-          box-sizing: border-box;
-          text-align: left;
-          background-color: initial;
-
-          font-size: 90%;
-          line-height: 150%;
-          color: #808080;
-
-          border: none;
-          border-left-color: #444;
-          border-left-style: solid;
-          border-left-width: 1px;
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --bg: #111111;
+        --text: #dddddd;
+        --muted: #999999;
+        --line: #333333;
+        --code-bg: #171717;
+        --link: #9bbcff;
+        --support-link: #e78ac3;
       }
-  }
+    }
 
-  span.sidenote small {
-      font-size: 100%;
-  }
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      overflow-anchor: none;
+      scrollbar-gutter: stable both-edges;
+    }
 
-  .sidenote-version {
-    display: none;
-  }
+    body {
+      max-width: 720px;
+      margin: 20px auto;
+      padding: 0 10px 32px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Roboto Slab", serif;
+      font-size: 18px;
+      line-height: 1.55;
+    }
 
-  .responsive-note .popup-note {
-    display: inline;
-  }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
 
-  @media (min-width: 1060px) {
+    nav span {
+      display: inline-flex;
+      gap: 12px;
+    }
+
+    nav a {
+      margin-right: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 1.2;
+      margin: 28px 0 8px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-top: 0;
+    }
+
+    .site-title,
+    .page-title {
+      font-size: 36px;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+
+    .content-heading a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .content-heading a::before {
+      content: "#";
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+      color: var(--muted);
+      opacity: 0.45;
+    }
+
+    .content-heading a:hover::before,
+    .content-heading a:focus::before {
+      opacity: 1;
+    }
+
+    p,
+    ul,
+    ol,
+    pre,
+    blockquote,
+    table,
+    figure {
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+
+    ul,
+    ol {
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: var(--link);
+      overflow-wrap: anywhere;
+    }
+
+    .support-link {
+      color: var(--support-link);
+    }
+
+    .site-footer {
+      margin-top: 28px;
+    }
+
+    .site-mark {
+      margin: 0;
+      text-align: center;
+    }
+
+    .site-mark-link {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background: var(--muted);
+      -webkit-mask: url("/logo_animated.svg") no-repeat center / contain;
+      mask: url("/logo_animated.svg") no-repeat center / contain;
+      vertical-align: middle;
+    }
+
+    .site-mark-link:hover,
+    .site-mark-link:focus {
+      background: var(--link);
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--line);
+      margin: 24px 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .avatar {
+      float: right;
+      width: 96px;
+      height: 96px;
+      margin: 0 0 12px 16px;
+      border-radius: 6px;
+    }
+
+    .muted,
+    .post-tags {
+      color: var(--muted);
+      font-size: 0.9em;
+    }
+
+    .post-tags a {
+      color: inherit;
+    }
+
+    .tag-index {
+      font-size: 1em;
+    }
+
+    .tag-index a {
+      margin-right: 8px;
+    }
+
+    .post-meta {
+      margin-top: -8px;
+      margin-bottom: 24px;
+    }
+
+    .post-meta a {
+      color: inherit;
+    }
+
+    .item-description {
+      font-size: 0.9em;
+    }
+
+    .not-found-gif {
+      float: right;
+      width: 128px;
+      height: auto;
+      margin: 0 0 12px 16px;
+    }
+
+    code,
+    pre {
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    code {
+      font-size: 0.9em;
+      line-height: 1;
+    }
+
+    code:not(pre code) {
+      background: var(--code-bg);
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      padding: 1px 3px;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--code-bg);
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    pre code {
+      font-size: inherit;
+      line-height: 1.2;
+    }
+
+    .chroma,
+    pre.chroma,
+    .highlight pre {
+      background-color: var(--code-bg);
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 14px;
+      border-left: 2px solid var(--line);
+      color: var(--muted);
+    }
+
+    sup {
+      position: relative;
+      top: -0.45em;
+      vertical-align: baseline;
+      font-size: 0.72em;
+      line-height: 0;
+    }
+
+    .table-wrapper,
+    .katex-display {
+      overflow-x: auto;
+      max-width: 100%;
+    }
+
+    .katex-display {
+      overflow-y: hidden;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid var(--line);
+      padding: 4px 6px;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--code-bg);
+    }
+
+    tbody tr:nth-child(even) {
+      background: color-mix(in srgb, var(--bg) 96%, var(--text));
+    }
+
+    figure {
+      margin-left: 0;
+      margin-right: 0;
+      text-align: center;
+    }
+
+    figure img {
+      display: inline-block;
+    }
+
+    figcaption {
+      color: var(--muted);
+      font-size: 0.9em;
+      text-align: center;
+    }
+
+    .footnotes {
+      overflow-wrap: anywhere;
+    }
+
+    .footnotes p {
+      white-space: normal;
+    }
+
+    .alert {
+      --alert-color: var(--muted);
+      --alert-bg: var(--code-bg);
+      display: flex;
+      gap: 10px;
+      margin: 16px 0;
+      padding: 10px 12px;
+      border-left: 3px solid var(--alert-color);
+      background: var(--alert-bg);
+    }
+
+    .alert-note {
+      --alert-color: #6c7f9d;
+      --alert-bg: color-mix(in srgb, var(--bg) 90%, #6c7f9d);
+    }
+
+    .alert-tip {
+      --alert-color: #6f876f;
+      --alert-bg: color-mix(in srgb, var(--bg) 90%, #6f876f);
+    }
+
+    .alert-important {
+      --alert-color: #85759b;
+      --alert-bg: color-mix(in srgb, var(--bg) 90%, #85759b);
+    }
+
+    .alert-warning {
+      --alert-color: #9a7b4f;
+      --alert-bg: color-mix(in srgb, var(--bg) 90%, #9a7b4f);
+    }
+
+    .alert-caution {
+      --alert-color: #9a6767;
+      --alert-bg: color-mix(in srgb, var(--bg) 90%, #9a6767);
+    }
+
+    .alert-icon {
+      flex: 0 0 auto;
+      width: 18px;
+      height: 18px;
+      margin-top: 4px;
+      color: var(--alert-color);
+    }
+
+    .alert-content {
+      min-width: 0;
+    }
+
+    .alert-content > :last-child,
+    .alert-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .alert-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .column-inner {
+      min-width: 0;
+      overflow-wrap: break-word;
+    }
+
+    .column-inner > *:first-child {
+      margin-top: 0;
+    }
+
+    .column-inner > *:last-child {
+      margin-bottom: 0;
+    }
+
+    span.sidenote,
     .sidenote-version {
-      display: inline;
+      display: none;
     }
 
     .responsive-note .popup-note {
-      display: none;
+      display: inline;
     }
-  }
 
-  .column-inner > *:first-child { margin-top: 0; }
-  .column-inner > *:last-child { margin-bottom: 0; }
+    @media (max-width: 680px) {
+      body {
+        margin-top: 14px;
+      }
 
-  .post-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-  .tag {
-      font-family: JetBrains Mono;
-      font-size: 0.9rem;
-      color: #aea1d4;
-      background: #aea1d41a;
-      padding: 2px 8px;
-      border-radius: 4px;
-      text-decoration: none;
-  }
-  a.tag:hover {
-      background: #aea1d433;
-      color: #c9bdf0;
-  }
-</style>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+      .avatar {
+        float: none;
+        display: block;
+        margin: 0 0 12px;
+      }
+
+      .not-found-gif {
+        float: none;
+        display: block;
+        margin: 0 0 12px;
+      }
+
+      .content-heading a::before {
+        display: none;
+      }
+
+      .columns {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="bg-pattern"></div>
   {{ partial "nav.html" . }}
-	{{ block "main" . }}
-	{{ end }}
+  {{ block "main" . }}{{ end }}
 </body>
 </html>

@@ -1,32 +1,14 @@
 {{ $context := . }}
-{{ $style := "inline" }}
-{{ $showCategory := false }}
-
 {{ if reflect.IsMap . }}
   {{ $context = .context | default . }}
-  {{ $style = .style | default "inline" }}
-  {{ $showCategory = .showCategory | default false }}
 {{ end }}
-  
-  <div class="post-tags post-tags--{{ $style }}">
-    {{ if $showCategory }}
-      {{ if $context.Params.category }}
-        <span class="tag post-tag post-tag--category" data-category="{{ $context.Params.category | lower | replaceRE `[^a-z0-9]+` `-` }}">
-          {{ $context.Params.category }}
-        </span>
-      {{ else if $context.Section }}
-        <span class="tag post-tag post-tag--category" data-category="{{ $context.Section | lower | replaceRE `[^a-z0-9]+` `-` }}">
-          {{ $context.Section | title }}
-        </span>
-      {{ end }}
-    {{ end }}
-    
-    {{ range $context.Params.tags }}
+
+{{ with $context.Params.tags }}
+  <p class="post-tags">
+    tags:
+    {{ range . }}
       {{ $slug := . | urlize }}
-      <a class="tag post-tag post-tag--tag" href="/tags#{{ $slug }}" data-tag="{{ $slug }}">#{{ . }}</a>
+      <a href="/tags#{{ $slug }}">#{{ . }}</a>
     {{ end }}
-    
-    {{ if and (not $context.Params.category) (not $context.Section) (not $context.Params.tags) }}
-      <span class="tag post-tag post-tag--category" data-category="blog">Blog</span>
-    {{ end }}
-  </div>
+  </p>
+{{ end }}

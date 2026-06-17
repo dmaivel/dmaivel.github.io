@@ -1,0 +1,33 @@
+{{- $src := .Get "src" -}}
+{{- $light := .Get "light" | default (replaceRE `(\.[^./]+)$` `_light$1` $src) -}}
+{{- $dark := .Get "dark" | default (replaceRE `(\.[^./]+)$` `_dark$1` $src) -}}
+
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+  {{- with .Get "link" -}}
+    <a href="{{ . }}"{{ with $.Get "target" }} target="{{ . }}"{{ end }}{{ with $.Get "rel" }} rel="{{ . }}"{{ end }}>
+  {{- end }}
+  <picture>
+    <source srcset="{{ $dark }}" media="(prefers-color-scheme: dark)">
+    <img src="{{ $light }}"
+      {{- if or (.Get "alt") (.Get "caption") }}
+        alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify | plainify }}{{ end }}"
+      {{- end }}
+      {{- with .Get "width" }} width="{{ . }}"{{ end }}
+      {{- with .Get "height" }} height="{{ . }}"{{ end }}
+      {{- with .Get "loading" }} loading="{{ . }}"{{ end }}>
+  </picture>
+  {{- if .Get "link" }}</a>{{ end }}
+  {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") }}
+    <figcaption>
+      {{- with .Get "title" }}<h4>{{ . }}</h4>{{ end }}
+      {{- if or (.Get "caption") (.Get "attr") }}
+        <p>
+          {{- .Get "caption" | markdownify -}}
+          {{- with .Get "attrlink" }} <a href="{{ . }}">{{ end -}}
+          {{- with .Get "attr" }} {{ . | markdownify }}{{ end -}}
+          {{- if .Get "attrlink" }}</a>{{ end -}}
+        </p>
+      {{- end }}
+    </figcaption>
+  {{- end }}
+</figure>
