@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="{{ "css/vs.css" | relURL }}">
   <link rel="stylesheet" href="{{ "css/vs-dark.css" | relURL }}" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="{{ "katex/katex.min.css" | relURL }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "index.xml" | absURL }}">
   {{ partial "opengraph.html" . }}
   <style>
     @font-face {
