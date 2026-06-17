@@ -18,6 +18,7 @@ title = 'dmaivel'
   autoHeadingIDType = "github"
 [params]
   favicon = "./favicon.ico"
+  htmlLang = 'en-us'
   description = 'I explore compilers, operating systems, virtualization, and runtimes.'
   ogLocale = 'en_US'
 [permalinks]
